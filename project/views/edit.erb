@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home</title>
+
+  <!--TO ATTACH-->
+  <link rel="stylesheet" href="./style/main.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+  <!--To ATTACH-->
+
+</head>
+<body>
+    <div class="grid-container">
+      <div class="homepage-navbar">
+        <a href="/homepage"><strong>STUDENTMENT</strong></a>
+      </div>
+      <div class="sidebar">
+        <div class="profile-info"><%=h @user %></div>
+        <ul>
+          <a href="/homepage"><li>Admin Panel</li></a>
+          <a href="/edit"><li>Settings</li></a>
+          <li><a href="/logout">Sign Out</a></li>
+        </ul>
+      </div>
+      <div class="display">
+        <form class="settings-container" method="POST">
+            <label>First Name</label>
+            <input name="first_name" value="<%=h session[:first_name] %>"></input>
+            <label>Surname</label>
+            <input value="<%=h session[:surname] %>"></input>
+            <label>Email</label>
+            <input value="<%=h session[:email] %>"></input>
+            <label>Gender</label>
+            <input value="<% if session[:gender] == 1 %>Male<% else %>Female<% end %>"></input>
+            <label>University</label>
+            <input value="<%=h session[:university] %>"></input>
+            <label>Field</label>
+            <input value="<%=h session[:field] %>"></input>
+            <label>Description</label>
+            <input value="<%=h session[:description] %>"></input>
+            <button type="submit">Update</button>
+        </form>
+      </div>
+    </div>
+      
+</body>
+</html>

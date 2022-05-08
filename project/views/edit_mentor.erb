@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Account settings</title>
+
+  <!--TO ATTACH-->
+  <link rel="stylesheet" href="./style/main.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+  <!--To ATTACH-->
+
+</head>
+<body>
+    <div class="grid-container">
+      <div class="homepage-navbar">
+        <a href="/homepage"><strong>STUDENTMENT</strong></a>
+      </div>
+      <div class="sidebar">
+        <div class="profile-info">Welcome Dear
+            <% if session[:role] == 1 %>
+            Mentee
+            <% elsif session[:role] == 2 %>
+            Mentor
+            <% else %>
+            Admin
+            <% end %><br><b><%=h session[:name] %></b><br>
+            <p>Notification : <%= @found.count %></p>
+          </div>
+        <ul>
+          <a href="/homepage"><li>My Mentees</li></a>
+          <a href="/pending"><li>
+              <% if @found.count == 0 %>
+              <b>Pending Requests &emsp;&emsp;&emsp;&emsp; <%= @found.count%></b>
+              <% else %>
+              Pending Requests
+              <% end %>
+              </li></a>
+          <a href="/edit"><li>Settings</li></a>
+          <a href="/logout"><li>Sign Out</li></a>
+        </ul>
+      </div>
+      <div class="display">
+        <form class="settings-container" method="POST">
+            <label>Username</label>
+            <input name="username" value="<%=h session[:user] %>"></input>
+            <label>Password</label>
+            <input name="password" placeholder="Password" type="password"></input>
+            <label>Email</label>
+            <input name="email" value="<%=h session[:email] %>"></input>
+            <label>Field</label>
+            <SELECT name="field" value="<%=h session[:field] %>">
+                <OPTION Value="Astronomy">Astronomy</OPTION>
+                <OPTION Value="Agriculture">Agriculture</OPTION>
+                <OPTION Value="Anthropology">Anthropology</OPTION>
+                <OPTION Value="Applied mathematics">Applied mathematics</OPTION>
+                <OPTION Value="Archaeology">Archaeology</OPTION>
+                <OPTION Value="Architecture and design">Architecture and design</OPTION>
+                <OPTION Value="Area studies">Area studies</OPTION>
+                <OPTION Value="Biology">Biology</OPTION>
+                <OPTION Value="Business">Business</OPTION>
+                <OPTION Value="Chemistry">Chemistry</OPTION>
+                <OPTION Value="Computer sciences">Computer sciences</OPTION>
+                <OPTION Value="Culinary arts">Culinary arts</OPTION>
+                <OPTION Value="Divinity">Divinity</OPTION>
+                <OPTION Value="Earth sciences">Earth sciences</OPTION>
+                <OPTION Value="Economics">Economics</OPTION>
+                <OPTION Value="Education">Education</OPTION>
+                <OPTION Value="Engineering and technology">Engineering and technology</OPTION>
+                <OPTION Value="Environmental studies and forestry">Environmental studies and forestry</OPTION>
+                <OPTION Value="Family and consumer science">Family and consumer science</OPTION>
+                <OPTION Value="Formal sciences">Formal sciences</OPTION>
+                <OPTION Value="Gender and sexuality studies">Gender and sexuality studies</OPTION>
+                <OPTION Value="Geography">Geography</OPTION>
+                <OPTION Value="History">History</OPTION>
+                <OPTION Value="Human physical performance and recreation">Human physical performance and recreation</OPTION>
+                <OPTION Value="Humanities and social science">Humanities and social science</OPTION>
+                <OPTION Value="Interdisciplinary studies">Interdisciplinary studies</OPTION>
+                <OPTION Value="Journalism, media studies and communication">Journalism, media studies and communication</OPTION>
+                <OPTION Value="Law">Law</OPTION>
+                <OPTION Value="Library and museum studies">Library and museum studies</OPTION>
+                <OPTION Value="Linguistics and languages">Linguistics and languages</OPTION>
+                <OPTION Value="Literature">Literature</OPTION>
+                <OPTION Value="Logic">Logic</OPTION>
+                <OPTION Value="Mathematics">Mathematics</OPTION>
+                <OPTION Value="Medicine">Medicine</OPTION>
+                <OPTION Value="Military sciences">Military sciences</OPTION>
+                <OPTION Value="Organizational studies">Organizational studies</OPTION>
+                <OPTION Value="Performing arts">Performing arts</OPTION>
+                <OPTION Value="Philosophy">Philosophy</OPTION>
+                <OPTION Value="Physics">Physics</OPTION>
+                <OPTION Value="Political science">Political science</OPTION>
+                <OPTION Value="Psychology">Psychology</OPTION>
+                <OPTION Value="Public administration">Public administration</OPTION>
+                <OPTION Value="Public policy">Public policy</OPTION>
+                <OPTION Value="Pure mathematics">Pure mathematics</OPTION>
+                <OPTION Value="Religion">Religion</OPTION>
+                <OPTION Value="Social work">Social work</OPTION>
+                <OPTION Value="Sociology">Sociology</OPTION>
+                <OPTION Value="Space sciences">Space sciences</OPTION>
+                <OPTION Value="Statistics">Statistics</OPTION>
+                <OPTION Value="Systems science">Systems science</OPTION>
+                <OPTION Value="The arts">The arts</OPTION>
+                <OPTION Value="Transportation">Transportation</OPTION>
+                <OPTION Value="Visual arts">Visual arts</OPTION>
+              </SELECT> 
+            <label>Company Description</label>
+            <input name="description" value="<%=h session[:description] %>"></input>
+            <button type="submit">Update</button>
+        </form>
+      </div>
+    </div>
+      
+</body>
+</html>

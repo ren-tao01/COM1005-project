@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home</title>
+
+  <!--TO ATTACH-->
+  <link rel="stylesheet" href="./style/main.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+  <!--To ATTACH-->
+
+</head>
+<body>
+  <div class="grid-container">
+      <div class="homepage-navbar">
+        <a href="/homepage"><strong>STUDENTMENT</strong></a>
+      </div>
+      <div class="sidebar">
+        <div class="profile-info">Welcome Dear
+            <% if session[:role] == 1 %>
+            Mentee
+            <% elsif session[:role] == 2 %>
+            Mentor
+            <% else %>
+            Admin
+            <% end %><br><b><%=h session[:name] %></b><br>
+            <p>Notification : <%= @found.count %></p>
+          </div>
+        <ul>
+          <a href="/homepage"><li>My Mentees</li></a>
+          <a href="/pending"><li>
+              <% if @found.count == 0 %>
+              <b>Pending Requests &emsp;&emsp;&emsp;&emsp; <%= @found.count%></b>
+              <% else %>
+              Pending Requests
+              <% end %>
+              </li></a>
+          <a href="/edit"><li>Settings</li></a>
+          <a href="/logout"><li>Sign Out</li></a>
+        </ul>
+      </div>
+      <div class="display">
+          <!-- if no matches puts -->
+          You have no matches yet
+          <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+          <!-- THERE SHOULD DISPLAY ALREADY MATCHED PAIRS-->
+          <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+
+    </div>
+      
+</body>
+<script src="./js/newPassword.js"></script>
+</html>

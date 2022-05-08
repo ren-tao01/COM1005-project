@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign in</title>
+
+  <!--TO ATTACH-->
+  <link rel="stylesheet" href="./style/main.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+  <!--To ATTACH-->
+
+</head>
+<body>
+  <!--Main Page-->
+    <div class="login-container">
+      <div class="login-navbar">
+        <div id="logo"><a href="/signin">STUDENTMENT</a></div>
+      </div>
+      <div id="login-navbar-items">
+      </div>
+      <div id="login-left-content">
+        <div id="content-text">Are you ready to</br><b>join our family?</b>
+        </div>
+        <!--svg created by Alzea Arafat-->
+        <div id="content-img"><img src="./img/Saly-10.svg"></div>
+            <label id="signas">Sign up as a</label>
+          <a href="/signupmentor" id="mentor-btn"><button class="signup-btn" >Mentor</button></a>
+          <a href="/signupmentee" id="mentee-btn"><button class="signup-btn" name="Mentee" >Mentee</button></a>
+        
+        
+      </div>
+      <div class="login-signin">
+        <form id="myForm" method="POST" >
+          <div class="loginspace">
+            <h1>Welcome</h1>
+              <input type="text" class="input" id="myInput" placeholder="Username" name="username" required>
+          </div>
+          <div class="loginspace">
+            <input type="password" class="input" placeholder="Password" name="password" required>
+        </div>
+        <div class="loginspace-2">
+          
+        </br>
+          <input type="submit" class="btn" value="Sign In">
+        </div>
+        </form>
+      </div>
+    </div>
+
+
+    </div>
+</body>
+<script src="./js/scripts.js"></script>
+</html>

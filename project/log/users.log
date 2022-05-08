@@ -1,0 +1,618 @@
+I, [2021-05-13T14:18:40.099948 #410]  INFO -- : (0.000212s) PRAGMA foreign_keys = 1
+I, [2021-05-13T14:18:40.100046 #410]  INFO -- : (0.000015s) PRAGMA case_sensitive_like = 1
+I, [2021-05-13T14:18:40.109037 #410]  INFO -- : (0.000061s) SELECT sqlite_version()
+I, [2021-05-13T14:18:40.109260 #410]  INFO -- : (0.000093s) PRAGMA table_info('requests')
+I, [2021-05-13T14:18:40.110352 #410]  INFO -- : (0.000143s) PRAGMA table_info('users')
+I, [2021-05-13T14:20:30.526022 #410]  INFO -- : (0.000041s) BEGIN
+I, [2021-05-13T14:20:30.526506 #410]  INFO -- : (0.000233s) INSERT INTO `users` (`username`, `password`, `role`, `first_name`, `surname`, `email`, `gender`, `field`, `pairing_status`, `outgoing_request`, `requested_to`) VALUES ('TestMentee', 'Password123', 1, 'Mentee', 'Test', 'TestMentee@sheffield.ac.uk', 1, 'Computer sciences', 0, 0, 0)
+I, [2021-05-13T14:20:30.527326 #410]  INFO -- : (0.000127s) SELECT * FROM `users` WHERE `id` = 1000
+I, [2021-05-13T14:20:30.637861 #410]  INFO -- : (0.110430s) COMMIT
+I, [2021-05-13T14:20:30.638654 #410]  INFO -- : (0.000314s) SELECT * FROM `users` WHERE (`username` = 'TestMentee') LIMIT 1
+I, [2021-05-13T14:20:30.639076 #410]  INFO -- : (0.000187s) SELECT * FROM `users` WHERE (`username` = 'TestMentee') LIMIT 1
+I, [2021-05-13T14:20:30.639539 #410]  INFO -- : (0.000185s) SELECT * FROM `users` WHERE (`username` = 'TestMentee') LIMIT 1
+I, [2021-05-13T14:20:30.641774 #410]  INFO -- : (0.000215s) SELECT * FROM `users` WHERE (`username` = 'TestMentee') LIMIT 1
+I, [2021-05-13T14:20:30.642099 #410]  INFO -- : (0.000172s) SELECT * FROM `users` WHERE (`username` = 'TestMentee') LIMIT 1
+I, [2021-05-13T14:20:30.642400 #410]  INFO -- : (0.000168s) SELECT * FROM `users` WHERE (`username` = 'TestMentee') LIMIT 1
+I, [2021-05-13T14:20:30.642611 #410]  INFO -- : (0.000022s) BEGIN
+I, [2021-05-13T14:20:30.643032 #410]  INFO -- : (0.000215s) INSERT INTO `requests` (`mentee_id`, `mentor_id`, `mentor_status`, `mentee_status`) VALUES (1000, 0, 0, 0)
+I, [2021-05-13T14:20:30.643258 #410]  INFO -- : (0.000087s) SELECT * FROM `requests` WHERE `mentee_id` = 1000
+I, [2021-05-13T14:20:30.742276 #410]  INFO -- : (0.098928s) COMMIT
+I, [2021-05-13T14:20:30.868894 #410]  INFO -- : (0.000175s) SELECT * FROM `users` WHERE `id` = 1000
+I, [2021-05-13T14:20:30.869247 #410]  INFO -- : (0.000093s) SELECT count(*) AS 'count' FROM `users` WHERE ((`pairing_status` LIKE 0 ESCAPE '\') AND (`role` = 2) AND (`field` = 'Computer sciences')) LIMIT 1
+I, [2021-05-13T14:20:35.461045 #410]  INFO -- : (0.000176s) SELECT * FROM `users` WHERE `id` = 1000
+I, [2021-05-13T14:20:35.461412 #410]  INFO -- : (0.000097s) SELECT count(*) AS 'count' FROM `users` WHERE ((`pairing_status` LIKE 0 ESCAPE '\') AND (`role` = 2) AND (`field` = 'Computer sciences')) LIMIT 1
+I, [2021-05-13T14:22:37.752773 #410]  INFO -- : (0.000155s) SELECT * FROM `users` WHERE (`username` = 'WrongUsername') LIMIT 1
+I, [2021-05-13T14:23:08.724413 #410]  INFO -- : (0.001445s) SELECT * FROM `users` WHERE (`username` = 'TestMentee') LIMIT 1
+I, [2021-05-13T14:23:08.724720 #410]  INFO -- : (0.000118s) SELECT * FROM `users` WHERE (`username` = 'TestMentee') LIMIT 1
+I, [2021-05-13T14:23:08.724897 #410]  INFO -- : (0.000094s) SELECT * FROM `users` WHERE (`username` = 'TestMentee') LIMIT 1
+I, [2021-05-13T14:23:08.725058 #410]  INFO -- : (0.000089s) SELECT * FROM `users` WHERE (`username` = 'TestMentee') LIMIT 1
+I, [2021-05-13T14:23:08.726164 #410]  INFO -- : (0.001034s) SELECT * FROM `users` WHERE (`username` = 'TestMentee') LIMIT 1
+I, [2021-05-13T14:23:08.726359 #410]  INFO -- : (0.000100s) SELECT * FROM `users` WHERE (`username` = 'TestMentee') LIMIT 1
+I, [2021-05-13T14:23:08.726525 #410]  INFO -- : (0.000090s) SELECT * FROM `users` WHERE (`username` = 'TestMentee') LIMIT 1
+I, [2021-05-13T14:23:08.726684 #410]  INFO -- : (0.000088s) SELECT * FROM `users` WHERE (`username` = 'TestMentee') LIMIT 1
+I, [2021-05-13T14:23:08.727577 #410]  INFO -- : (0.000124s) SELECT * FROM `users` WHERE (`username` = 'TestMentee') LIMIT 1
+I, [2021-05-13T14:23:08.727781 #410]  INFO -- : (0.000111s) SELECT * FROM `users` WHERE (`username` = 'TestMentee') LIMIT 1
+I, [2021-05-13T14:23:08.727981 #410]  INFO -- : (0.000097s) SELECT * FROM `users` WHERE (`username` = 'TestMentee') LIMIT 1
+I, [2021-05-13T14:23:08.728145 #410]  INFO -- : (0.000090s) SELECT * FROM `users` WHERE (`username` = 'TestMentee') LIMIT 1
+I, [2021-05-13T14:23:08.728950 #410]  INFO -- : (0.000735s) SELECT * FROM `users` WHERE (`username` = 'TestMentee') LIMIT 1
+I, [2021-05-13T14:23:08.841297 #410]  INFO -- : (0.000147s) SELECT * FROM `users` WHERE `id` = 1000
+I, [2021-05-13T14:23:08.841620 #410]  INFO -- : (0.000088s) SELECT count(*) AS 'count' FROM `users` WHERE ((`pairing_status` LIKE 0 ESCAPE '\') AND (`role` = 2) AND (`field` = 'Computer sciences')) LIMIT 1
+I, [2021-05-13T14:35:02.843784 #410]  INFO -- : (0.000286s) SELECT * FROM `users` WHERE (`username` = 'TestMentee') LIMIT 1
+I, [2021-05-13T14:35:02.844199 #410]  INFO -- : (0.000187s) SELECT * FROM `users` WHERE (`username` = 'TestMentee') LIMIT 1
+I, [2021-05-13T14:35:02.844478 #410]  INFO -- : (0.000156s) SELECT * FROM `users` WHERE (`username` = 'TestMentee') LIMIT 1
+I, [2021-05-13T14:35:02.844754 #410]  INFO -- : (0.000161s) SELECT * FROM `users` WHERE (`username` = 'TestMentee') LIMIT 1
+I, [2021-05-13T14:35:02.845034 #410]  INFO -- : (0.000166s) SELECT * FROM `users` WHERE (`username` = 'TestMentee') LIMIT 1
+I, [2021-05-13T14:35:02.845302 #410]  INFO -- : (0.000151s) SELECT * FROM `users` WHERE (`username` = 'TestMentee') LIMIT 1
+I, [2021-05-13T14:35:02.845583 #410]  INFO -- : (0.000162s) SELECT * FROM `users` WHERE (`username` = 'TestMentee') LIMIT 1
+I, [2021-05-13T14:35:02.845831 #410]  INFO -- : (0.000144s) SELECT * FROM `users` WHERE (`username` = 'TestMentee') LIMIT 1
+I, [2021-05-13T14:35:02.846097 #410]  INFO -- : (0.000153s) SELECT * FROM `users` WHERE (`username` = 'TestMentee') LIMIT 1
+I, [2021-05-13T14:35:02.846358 #410]  INFO -- : (0.000152s) SELECT * FROM `users` WHERE (`username` = 'TestMentee') LIMIT 1
+I, [2021-05-13T14:35:02.846630 #410]  INFO -- : (0.000157s) SELECT * FROM `users` WHERE (`username` = 'TestMentee') LIMIT 1
+I, [2021-05-13T14:35:02.846878 #410]  INFO -- : (0.000148s) SELECT * FROM `users` WHERE (`username` = 'TestMentee') LIMIT 1
+I, [2021-05-13T14:35:02.847136 #410]  INFO -- : (0.000149s) SELECT * FROM `users` WHERE (`username` = 'TestMentee') LIMIT 1
+I, [2021-05-13T14:35:02.961169 #410]  INFO -- : (0.000251s) SELECT * FROM `users` WHERE `id` = 1000
+I, [2021-05-13T14:35:02.961714 #410]  INFO -- : (0.000157s) SELECT count(*) AS 'count' FROM `users` WHERE ((`pairing_status` LIKE 0 ESCAPE '\') AND (`role` = 2) AND (`field` = 'Computer sciences')) LIMIT 1
+I, [2021-05-13T14:36:02.049061 #410]  INFO -- : (0.000230s) SELECT * FROM `users` WHERE `id` = 1000
+I, [2021-05-13T14:36:02.049500 #410]  INFO -- : (0.000114s) SELECT count(*) AS 'count' FROM `users` WHERE ((`pairing_status` LIKE 0 ESCAPE '\') AND (`role` = 2) AND (`field` = 'Computer sciences')) LIMIT 1
+I, [2021-05-13T14:40:49.226657 #410]  INFO -- : (0.000039s) BEGIN
+I, [2021-05-13T14:40:49.227111 #410]  INFO -- : (0.000233s) INSERT INTO `users` (`username`, `password`, `role`, `first_name`, `surname`, `email`, `gender`, `field`, `pairing_status`, `outgoing_request`, `requested_to`) VALUES ('TestMentor', 'password123', 2, 'Mentor', 'Test', 'TestMentor@sheffield.ac.uk', 1, 'Astronomy', 0, 0, 0)
+I, [2021-05-13T14:40:49.227396 #410]  INFO -- : (0.000142s) SELECT * FROM `users` WHERE `id` = 1001
+I, [2021-05-13T14:40:49.332867 #410]  INFO -- : (0.105395s) COMMIT
+I, [2021-05-13T14:40:49.333191 #410]  INFO -- : (0.000150s) SELECT * FROM `users` WHERE (`username` = 'TestMentor') LIMIT 1
+I, [2021-05-13T14:40:49.333412 #410]  INFO -- : (0.000105s) SELECT * FROM `users` WHERE (`username` = 'TestMentor') LIMIT 1
+I, [2021-05-13T14:40:49.333615 #410]  INFO -- : (0.000119s) SELECT * FROM `users` WHERE (`username` = 'TestMentor') LIMIT 1
+I, [2021-05-13T14:40:49.333795 #410]  INFO -- : (0.000095s) SELECT * FROM `users` WHERE (`username` = 'TestMentor') LIMIT 1
+I, [2021-05-13T14:40:49.333974 #410]  INFO -- : (0.000095s) SELECT * FROM `users` WHERE (`username` = 'TestMentor') LIMIT 1
+I, [2021-05-13T14:40:49.334188 #410]  INFO -- : (0.000118s) SELECT * FROM `users` WHERE (`username` = 'TestMentor') LIMIT 1
+I, [2021-05-13T14:40:49.443564 #410]  INFO -- : (0.000100s) SELECT count(*) AS 'count' FROM `users` WHERE (`requested_to` = 1001) LIMIT 1
+I, [2021-05-13T14:40:49.443697 #410]  INFO -- : (0.000058s) SELECT count(*) AS 'count' FROM `users` WHERE (`requested_to` = 1001) LIMIT 1
+I, [2021-05-13T14:40:49.443812 #410]  INFO -- : (0.000068s) SELECT count(*) AS 'count' FROM `users` WHERE (`requested_to` = 1001) LIMIT 1
+I, [2021-05-13T14:42:21.190396 #410]  INFO -- : (0.000172s) SELECT * FROM `users` WHERE (`username` = 'TestMentee') LIMIT 1
+I, [2021-05-13T14:42:21.190676 #410]  INFO -- : (0.000111s) SELECT * FROM `users` WHERE (`username` = 'TestMentee') LIMIT 1
+I, [2021-05-13T14:42:21.190880 #410]  INFO -- : (0.000093s) SELECT * FROM `users` WHERE (`username` = 'TestMentee') LIMIT 1
+I, [2021-05-13T14:42:21.191044 #410]  INFO -- : (0.000089s) SELECT * FROM `users` WHERE (`username` = 'TestMentee') LIMIT 1
+I, [2021-05-13T14:42:21.191200 #410]  INFO -- : (0.000088s) SELECT * FROM `users` WHERE (`username` = 'TestMentee') LIMIT 1
+I, [2021-05-13T14:42:21.191372 #410]  INFO -- : (0.000087s) SELECT * FROM `users` WHERE (`username` = 'TestMentee') LIMIT 1
+I, [2021-05-13T14:42:21.191533 #410]  INFO -- : (0.000092s) SELECT * FROM `users` WHERE (`username` = 'TestMentee') LIMIT 1
+I, [2021-05-13T14:42:21.191828 #410]  INFO -- : (0.000187s) SELECT * FROM `users` WHERE (`username` = 'TestMentee') LIMIT 1
+I, [2021-05-13T14:42:21.192116 #410]  INFO -- : (0.000176s) SELECT * FROM `users` WHERE (`username` = 'TestMentee') LIMIT 1
+I, [2021-05-13T14:42:21.192354 #410]  INFO -- : (0.000134s) SELECT * FROM `users` WHERE (`username` = 'TestMentee') LIMIT 1
+I, [2021-05-13T14:42:21.192577 #410]  INFO -- : (0.000124s) SELECT * FROM `users` WHERE (`username` = 'TestMentee') LIMIT 1
+I, [2021-05-13T14:42:21.192820 #410]  INFO -- : (0.000145s) SELECT * FROM `users` WHERE (`username` = 'TestMentee') LIMIT 1
+I, [2021-05-13T14:42:21.193077 #410]  INFO -- : (0.000158s) SELECT * FROM `users` WHERE (`username` = 'TestMentee') LIMIT 1
+I, [2021-05-13T14:42:21.322607 #410]  INFO -- : (0.000167s) SELECT * FROM `users` WHERE `id` = 1000
+I, [2021-05-13T14:42:21.322985 #410]  INFO -- : (0.000096s) SELECT count(*) AS 'count' FROM `users` WHERE ((`pairing_status` LIKE 0 ESCAPE '\') AND (`role` = 2) AND (`field` = 'Computer sciences')) LIMIT 1
+I, [2021-05-14T10:17:28.319108 #242]  INFO -- : (0.000201s) PRAGMA foreign_keys = 1
+I, [2021-05-14T10:17:28.319205 #242]  INFO -- : (0.000015s) PRAGMA case_sensitive_like = 1
+I, [2021-05-14T10:17:28.328698 #242]  INFO -- : (0.000067s) SELECT sqlite_version()
+I, [2021-05-14T10:17:28.328934 #242]  INFO -- : (0.000096s) PRAGMA table_info('requests')
+I, [2021-05-14T10:17:28.332599 #242]  INFO -- : (0.000146s) PRAGMA table_info('users')
+I, [2021-05-14T10:18:36.422043 #242]  INFO -- : (0.000283s) SELECT * FROM `users` WHERE (`username` = 'TestMentee') LIMIT 1
+I, [2021-05-14T10:18:36.423274 #242]  INFO -- : (0.000173s) SELECT * FROM `users` WHERE (`username` = 'TestMentee') LIMIT 1
+I, [2021-05-14T10:18:36.423669 #242]  INFO -- : (0.000150s) SELECT * FROM `users` WHERE (`username` = 'TestMentee') LIMIT 1
+I, [2021-05-14T10:18:36.423944 #242]  INFO -- : (0.000144s) SELECT * FROM `users` WHERE (`username` = 'TestMentee') LIMIT 1
+I, [2021-05-14T10:18:36.424194 #242]  INFO -- : (0.000143s) SELECT * FROM `users` WHERE (`username` = 'TestMentee') LIMIT 1
+I, [2021-05-14T10:18:36.425210 #242]  INFO -- : (0.000915s) SELECT * FROM `users` WHERE (`username` = 'TestMentee') LIMIT 1
+I, [2021-05-14T10:18:36.425429 #242]  INFO -- : (0.000117s) SELECT * FROM `users` WHERE (`username` = 'TestMentee') LIMIT 1
+I, [2021-05-14T10:18:36.425610 #242]  INFO -- : (0.000098s) SELECT * FROM `users` WHERE (`username` = 'TestMentee') LIMIT 1
+I, [2021-05-14T10:18:36.425775 #242]  INFO -- : (0.000092s) SELECT * FROM `users` WHERE (`username` = 'TestMentee') LIMIT 1
+I, [2021-05-14T10:18:36.426585 #242]  INFO -- : (0.000738s) SELECT * FROM `users` WHERE (`username` = 'TestMentee') LIMIT 1
+I, [2021-05-14T10:18:36.426794 #242]  INFO -- : (0.000104s) SELECT * FROM `users` WHERE (`username` = 'TestMentee') LIMIT 1
+I, [2021-05-14T10:18:36.426964 #242]  INFO -- : (0.000095s) SELECT * FROM `users` WHERE (`username` = 'TestMentee') LIMIT 1
+I, [2021-05-14T10:18:36.427130 #242]  INFO -- : (0.000093s) SELECT * FROM `users` WHERE (`username` = 'TestMentee') LIMIT 1
+I, [2021-05-14T10:18:36.547169 #242]  INFO -- : (0.000192s) SELECT * FROM `users` WHERE `id` = 1000
+I, [2021-05-14T10:18:36.547552 #242]  INFO -- : (0.000095s) SELECT count(*) AS 'count' FROM `users` WHERE ((`pairing_status` LIKE 0 ESCAPE '\') AND (`role` = 2) AND (`field` = 'Computer sciences')) LIMIT 1
+I, [2021-05-14T10:19:24.934487 #242]  INFO -- : (0.000172s) SELECT * FROM `users` WHERE `id` = 1000
+I, [2021-05-14T10:19:24.934811 #242]  INFO -- : (0.000130s) SELECT * FROM `users` WHERE (`username` = 'TestMentee') LIMIT 1
+I, [2021-05-14T10:19:24.934972 #242]  INFO -- : (0.000020s) BEGIN
+I, [2021-05-14T10:19:24.935390 #242]  INFO -- : (0.000247s) UPDATE `users` SET `username` = 'TestMentee1' WHERE (`id` = 1000)
+I, [2021-05-14T10:19:25.031940 #242]  INFO -- : (0.096460s) COMMIT
+I, [2021-05-14T10:19:25.032377 #242]  INFO -- : (0.000161s) SELECT * FROM `users` WHERE (`username` = 'TestMentee') LIMIT 1
+I, [2021-05-14T10:19:59.137207 #242]  INFO -- : (0.000169s) SELECT * FROM `users` WHERE `id` = 1000
+I, [2021-05-14T10:19:59.137572 #242]  INFO -- : (0.000093s) SELECT count(*) AS 'count' FROM `users` WHERE ((`pairing_status` LIKE 0 ESCAPE '\') AND (`role` = 2) AND (`field` = 'Computer sciences')) LIMIT 1
+I, [2021-05-14T10:20:41.994392 #242]  INFO -- : (0.000165s) SELECT * FROM `users` WHERE (`username` = 'yrgbmentee') LIMIT 1
+I, [2021-05-14T10:22:53.083451 #242]  INFO -- : (0.000056s) BEGIN
+I, [2021-05-14T10:22:53.083972 #242]  INFO -- : (0.000275s) INSERT INTO `users` (`username`, `password`, `role`, `first_name`, `surname`, `email`, `gender`, `field`, `pairing_status`, `outgoing_request`, `requested_to`) VALUES ('engmentee', 'eng', 1, 'eng', 'mentee', 'engmentee@sheffield.ac.uk', 1, 'Engineering and technology', 0, 0, 0)
+I, [2021-05-14T10:22:53.084218 #242]  INFO -- : (0.000110s) SELECT * FROM `users` WHERE `id` = 1002
+I, [2021-05-14T10:22:53.168202 #242]  INFO -- : (0.083914s) COMMIT
+I, [2021-05-14T10:22:53.168648 #242]  INFO -- : (0.000229s) SELECT * FROM `users` WHERE (`username` = 'engmentee') LIMIT 1
+I, [2021-05-14T10:22:53.168901 #242]  INFO -- : (0.000115s) SELECT * FROM `users` WHERE (`username` = 'engmentee') LIMIT 1
+I, [2021-05-14T10:22:53.169098 #242]  INFO -- : (0.000101s) SELECT * FROM `users` WHERE (`username` = 'engmentee') LIMIT 1
+I, [2021-05-14T10:22:53.169278 #242]  INFO -- : (0.000098s) SELECT * FROM `users` WHERE (`username` = 'engmentee') LIMIT 1
+I, [2021-05-14T10:22:53.169481 #242]  INFO -- : (0.000106s) SELECT * FROM `users` WHERE (`username` = 'engmentee') LIMIT 1
+I, [2021-05-14T10:22:53.169675 #242]  INFO -- : (0.000110s) SELECT * FROM `users` WHERE (`username` = 'engmentee') LIMIT 1
+I, [2021-05-14T10:22:53.169821 #242]  INFO -- : (0.000015s) BEGIN
+I, [2021-05-14T10:22:53.170112 #242]  INFO -- : (0.000148s) INSERT INTO `requests` (`mentee_id`, `mentor_id`, `mentor_status`, `mentee_status`) VALUES (1002, 0, 0, 0)
+I, [2021-05-14T10:22:53.170295 #242]  INFO -- : (0.000054s) SELECT * FROM `requests` WHERE `mentee_id` = 1002
+I, [2021-05-14T10:22:53.267994 #242]  INFO -- : (0.097631s) COMMIT
+I, [2021-05-14T10:22:53.385707 #242]  INFO -- : (0.000170s) SELECT * FROM `users` WHERE `id` = 1002
+I, [2021-05-14T10:22:53.386057 #242]  INFO -- : (0.000094s) SELECT count(*) AS 'count' FROM `users` WHERE ((`pairing_status` LIKE 0 ESCAPE '\') AND (`role` = 2) AND (`field` = 'Engineering and technology')) LIMIT 1
+I, [2021-05-14T10:23:41.332833 #242]  INFO -- : (0.000037s) BEGIN
+I, [2021-05-14T10:23:41.333321 #242]  INFO -- : (0.000241s) INSERT INTO `users` (`username`, `password`, `role`, `first_name`, `surname`, `email`, `gender`, `field`, `pairing_status`, `outgoing_request`, `requested_to`) VALUES ('engmentor', 'eng', 2, 'eng', 'mentor', 'engmentor@sheffield.ac.uk', 1, 'Engineering and technology', 0, 0, 0)
+I, [2021-05-14T10:23:41.333589 #242]  INFO -- : (0.000113s) SELECT * FROM `users` WHERE `id` = 1003
+I, [2021-05-14T10:23:41.416502 #242]  INFO -- : (0.082843s) COMMIT
+I, [2021-05-14T10:23:41.416826 #242]  INFO -- : (0.000156s) SELECT * FROM `users` WHERE (`username` = 'engmentor') LIMIT 1
+I, [2021-05-14T10:23:41.417045 #242]  INFO -- : (0.000122s) SELECT * FROM `users` WHERE (`username` = 'engmentor') LIMIT 1
+I, [2021-05-14T10:23:41.417208 #242]  INFO -- : (0.000088s) SELECT * FROM `users` WHERE (`username` = 'engmentor') LIMIT 1
+I, [2021-05-14T10:23:41.417369 #242]  INFO -- : (0.000090s) SELECT * FROM `users` WHERE (`username` = 'engmentor') LIMIT 1
+I, [2021-05-14T10:23:41.417568 #242]  INFO -- : (0.000131s) SELECT * FROM `users` WHERE (`username` = 'engmentor') LIMIT 1
+I, [2021-05-14T10:23:41.417732 #242]  INFO -- : (0.000087s) SELECT * FROM `users` WHERE (`username` = 'engmentor') LIMIT 1
+I, [2021-05-14T10:23:41.531353 #242]  INFO -- : (0.000108s) SELECT count(*) AS 'count' FROM `users` WHERE (`requested_to` = 1003) LIMIT 1
+I, [2021-05-14T10:23:41.531487 #242]  INFO -- : (0.000060s) SELECT count(*) AS 'count' FROM `users` WHERE (`requested_to` = 1003) LIMIT 1
+I, [2021-05-14T10:23:41.531581 #242]  INFO -- : (0.000047s) SELECT count(*) AS 'count' FROM `users` WHERE (`requested_to` = 1003) LIMIT 1
+I, [2021-05-14T10:23:53.656061 #242]  INFO -- : (0.000179s) SELECT * FROM `users` WHERE (`username` = 'engmentee') LIMIT 1
+I, [2021-05-14T10:23:53.656347 #242]  INFO -- : (0.000126s) SELECT * FROM `users` WHERE (`username` = 'engmentee') LIMIT 1
+I, [2021-05-14T10:23:53.656520 #242]  INFO -- : (0.000093s) SELECT * FROM `users` WHERE (`username` = 'engmentee') LIMIT 1
+I, [2021-05-14T10:23:53.656675 #242]  INFO -- : (0.000084s) SELECT * FROM `users` WHERE (`username` = 'engmentee') LIMIT 1
+I, [2021-05-14T10:23:53.656841 #242]  INFO -- : (0.000099s) SELECT * FROM `users` WHERE (`username` = 'engmentee') LIMIT 1
+I, [2021-05-14T10:23:53.656997 #242]  INFO -- : (0.000088s) SELECT * FROM `users` WHERE (`username` = 'engmentee') LIMIT 1
+I, [2021-05-14T10:23:53.657142 #242]  INFO -- : (0.000082s) SELECT * FROM `users` WHERE (`username` = 'engmentee') LIMIT 1
+I, [2021-05-14T10:23:53.657301 #242]  INFO -- : (0.000096s) SELECT * FROM `users` WHERE (`username` = 'engmentee') LIMIT 1
+I, [2021-05-14T10:23:53.657458 #242]  INFO -- : (0.000089s) SELECT * FROM `users` WHERE (`username` = 'engmentee') LIMIT 1
+I, [2021-05-14T10:23:53.657602 #242]  INFO -- : (0.000081s) SELECT * FROM `users` WHERE (`username` = 'engmentee') LIMIT 1
+I, [2021-05-14T10:23:53.657746 #242]  INFO -- : (0.000080s) SELECT * FROM `users` WHERE (`username` = 'engmentee') LIMIT 1
+I, [2021-05-14T10:23:53.657919 #242]  INFO -- : (0.000087s) SELECT * FROM `users` WHERE (`username` = 'engmentee') LIMIT 1
+I, [2021-05-14T10:23:53.658065 #242]  INFO -- : (0.000082s) SELECT * FROM `users` WHERE (`username` = 'engmentee') LIMIT 1
+I, [2021-05-14T10:23:53.773266 #242]  INFO -- : (0.000177s) SELECT * FROM `users` WHERE `id` = 1002
+I, [2021-05-14T10:23:53.773597 #242]  INFO -- : (0.000087s) SELECT count(*) AS 'count' FROM `users` WHERE ((`pairing_status` LIKE 0 ESCAPE '\') AND (`role` = 2) AND (`field` = 'Engineering and technology')) LIMIT 1
+I, [2021-05-14T10:23:53.773816 #242]  INFO -- : (0.000124s) SELECT * FROM `users` WHERE ((`pairing_status` LIKE 0 ESCAPE '\') AND (`role` = 2) AND (`field` = 'Engineering and technology'))
+I, [2021-05-14T10:23:56.941016 #242]  INFO -- : (0.000168s) SELECT * FROM `users` WHERE `id` = 1002
+I, [2021-05-14T10:23:56.941335 #242]  INFO -- : (0.000143s) SELECT * FROM `users` WHERE (`username` = 'engmentee') LIMIT 1
+I, [2021-05-14T10:23:56.941469 #242]  INFO -- : (0.000015s) BEGIN
+I, [2021-05-14T10:23:56.941751 #242]  INFO -- : (0.000140s) UPDATE `users` SET `outgoing_request` = 1 WHERE (`id` = 1002)
+I, [2021-05-14T10:23:57.039608 #242]  INFO -- : (0.097789s) COMMIT
+I, [2021-05-14T10:23:57.039939 #242]  INFO -- : (0.000144s) SELECT * FROM `users` WHERE (`username` = 'engmentee') LIMIT 1
+I, [2021-05-14T10:23:57.040070 #242]  INFO -- : (0.000014s) BEGIN
+I, [2021-05-14T10:23:57.040341 #242]  INFO -- : (0.000131s) UPDATE `users` SET `requested_to` = 1003 WHERE (`id` = 1002)
+I, [2021-05-14T10:23:57.127900 #242]  INFO -- : (0.087493s) COMMIT
+I, [2021-05-14T10:26:43.005260 #242]  INFO -- : (0.000179s) SELECT * FROM `users` WHERE `id` = 1002
+I, [2021-05-14T10:27:02.872196 #242]  INFO -- : (0.000192s) SELECT * FROM `users` WHERE (`username` = 'engmentor') LIMIT 1
+I, [2021-05-14T10:27:02.872467 #242]  INFO -- : (0.000111s) SELECT * FROM `users` WHERE (`username` = 'engmentor') LIMIT 1
+I, [2021-05-14T10:27:02.872674 #242]  INFO -- : (0.000114s) SELECT * FROM `users` WHERE (`username` = 'engmentor') LIMIT 1
+I, [2021-05-14T10:27:02.872874 #242]  INFO -- : (0.000103s) SELECT * FROM `users` WHERE (`username` = 'engmentor') LIMIT 1
+I, [2021-05-14T10:27:02.873063 #242]  INFO -- : (0.000100s) SELECT * FROM `users` WHERE (`username` = 'engmentor') LIMIT 1
+I, [2021-05-14T10:27:02.873253 #242]  INFO -- : (0.000100s) SELECT * FROM `users` WHERE (`username` = 'engmentor') LIMIT 1
+I, [2021-05-14T10:27:02.873457 #242]  INFO -- : (0.000105s) SELECT * FROM `users` WHERE (`username` = 'engmentor') LIMIT 1
+I, [2021-05-14T10:27:02.873652 #242]  INFO -- : (0.000103s) SELECT * FROM `users` WHERE (`username` = 'engmentor') LIMIT 1
+I, [2021-05-14T10:27:02.873850 #242]  INFO -- : (0.000101s) SELECT * FROM `users` WHERE (`username` = 'engmentor') LIMIT 1
+I, [2021-05-14T10:27:02.874043 #242]  INFO -- : (0.000107s) SELECT * FROM `users` WHERE (`username` = 'engmentor') LIMIT 1
+I, [2021-05-14T10:27:02.874208 #242]  INFO -- : (0.000088s) SELECT * FROM `users` WHERE (`username` = 'engmentor') LIMIT 1
+I, [2021-05-14T10:27:02.874368 #242]  INFO -- : (0.000086s) SELECT * FROM `users` WHERE (`username` = 'engmentor') LIMIT 1
+I, [2021-05-14T10:27:02.874527 #242]  INFO -- : (0.000086s) SELECT * FROM `users` WHERE (`username` = 'engmentor') LIMIT 1
+I, [2021-05-14T10:27:02.986108 #242]  INFO -- : (0.000111s) SELECT count(*) AS 'count' FROM `users` WHERE (`requested_to` = 1003) LIMIT 1
+I, [2021-05-14T10:27:02.986276 #242]  INFO -- : (0.000080s) SELECT count(*) AS 'count' FROM `users` WHERE (`requested_to` = 1003) LIMIT 1
+I, [2021-05-14T10:27:06.985576 #242]  INFO -- : (0.000137s) SELECT count(*) AS 'count' FROM `users` WHERE (`requested_to` = 1003) LIMIT 1
+I, [2021-05-14T10:27:06.985739 #242]  INFO -- : (0.000064s) SELECT count(*) AS 'count' FROM `users` WHERE (`requested_to` = 1003) LIMIT 1
+I, [2021-05-14T10:27:06.985838 #242]  INFO -- : (0.000048s) SELECT count(*) AS 'count' FROM `users` WHERE (`requested_to` = 1003) LIMIT 1
+I, [2021-05-14T10:27:06.986160 #242]  INFO -- : (0.000083s) SELECT * FROM `users` WHERE (`username` = 'engmentee') LIMIT 1
+I, [2021-05-14T10:27:06.986214 #242]  INFO -- : (0.000295s) SELECT * FROM `users` WHERE (`requested_to` = 1003)
+I, [2021-05-14T10:29:08.931975 #242]  INFO -- : (0.000151s) SELECT count(*) AS 'count' FROM `users` WHERE (`requested_to` = 1003) LIMIT 1
+I, [2021-05-14T10:29:08.932156 #242]  INFO -- : (0.000070s) SELECT count(*) AS 'count' FROM `users` WHERE (`requested_to` = 1003) LIMIT 1
+I, [2021-05-14T10:29:09.843836 #242]  INFO -- : (0.000205s) SELECT count(*) AS 'count' FROM `users` WHERE (`requested_to` = 1003) LIMIT 1
+I, [2021-05-14T10:29:09.844040 #242]  INFO -- : (0.000079s) SELECT count(*) AS 'count' FROM `users` WHERE (`requested_to` = 1003) LIMIT 1
+I, [2021-05-14T10:29:09.844154 #242]  INFO -- : (0.000056s) SELECT count(*) AS 'count' FROM `users` WHERE (`requested_to` = 1003) LIMIT 1
+I, [2021-05-14T10:29:09.844480 #242]  INFO -- : (0.000080s) SELECT * FROM `users` WHERE (`username` = 'engmentee') LIMIT 1
+I, [2021-05-14T10:29:09.844541 #242]  INFO -- : (0.000290s) SELECT * FROM `users` WHERE (`requested_to` = 1003)
+I, [2021-05-14T10:30:05.821679 #242]  INFO -- : (0.000157s) SELECT * FROM `users` WHERE (`username` = 'engmentee1') LIMIT 1
+I, [2021-05-14T10:30:20.939014 #242]  INFO -- : (0.000296s) SELECT * FROM `users` WHERE (`username` = 'engmentee') LIMIT 1
+I, [2021-05-14T10:30:20.939483 #242]  INFO -- : (0.000192s) SELECT * FROM `users` WHERE (`username` = 'engmentee') LIMIT 1
+I, [2021-05-14T10:30:20.939798 #242]  INFO -- : (0.000189s) SELECT * FROM `users` WHERE (`username` = 'engmentee') LIMIT 1
+I, [2021-05-14T10:30:20.940081 #242]  INFO -- : (0.000162s) SELECT * FROM `users` WHERE (`username` = 'engmentee') LIMIT 1
+I, [2021-05-14T10:30:20.940354 #242]  INFO -- : (0.000163s) SELECT * FROM `users` WHERE (`username` = 'engmentee') LIMIT 1
+I, [2021-05-14T10:30:20.940619 #242]  INFO -- : (0.000159s) SELECT * FROM `users` WHERE (`username` = 'engmentee') LIMIT 1
+I, [2021-05-14T10:30:20.940876 #242]  INFO -- : (0.000152s) SELECT * FROM `users` WHERE (`username` = 'engmentee') LIMIT 1
+I, [2021-05-14T10:30:20.941131 #242]  INFO -- : (0.000150s) SELECT * FROM `users` WHERE (`username` = 'engmentee') LIMIT 1
+I, [2021-05-14T10:30:20.941381 #242]  INFO -- : (0.000147s) SELECT * FROM `users` WHERE (`username` = 'engmentee') LIMIT 1
+I, [2021-05-14T10:30:20.941633 #242]  INFO -- : (0.000149s) SELECT * FROM `users` WHERE (`username` = 'engmentee') LIMIT 1
+I, [2021-05-14T10:30:20.941887 #242]  INFO -- : (0.000148s) SELECT * FROM `users` WHERE (`username` = 'engmentee') LIMIT 1
+I, [2021-05-14T10:30:20.942135 #242]  INFO -- : (0.000145s) SELECT * FROM `users` WHERE (`username` = 'engmentee') LIMIT 1
+I, [2021-05-14T10:30:20.942380 #242]  INFO -- : (0.000145s) SELECT * FROM `users` WHERE (`username` = 'engmentee') LIMIT 1
+I, [2021-05-14T10:30:21.056984 #242]  INFO -- : (0.000161s) SELECT * FROM `users` WHERE `id` = 1002
+I, [2021-05-14T10:30:25.275630 #242]  INFO -- : (0.000168s) SELECT * FROM `users` WHERE `id` = 1002
+I, [2021-05-14T10:30:25.275990 #242]  INFO -- : (0.000134s) SELECT * FROM `users` WHERE (`username` = 'engmentee') LIMIT 1
+I, [2021-05-14T10:30:25.276135 #242]  INFO -- : (0.000016s) BEGIN
+I, [2021-05-14T10:30:25.276502 #242]  INFO -- : (0.000208s) UPDATE `users` SET `outgoing_request` = 0 WHERE (`id` = 1002)
+I, [2021-05-14T10:30:25.359980 #242]  INFO -- : (0.083394s) COMMIT
+I, [2021-05-14T10:30:25.360409 #242]  INFO -- : (0.000193s) SELECT * FROM `users` WHERE (`username` = 'engmentee') LIMIT 1
+I, [2021-05-14T10:30:25.360562 #242]  INFO -- : (0.000019s) BEGIN
+I, [2021-05-14T10:30:25.360898 #242]  INFO -- : (0.000164s) UPDATE `users` SET `requested_to` = 0 WHERE (`id` = 1002)
+I, [2021-05-14T10:30:25.453150 #242]  INFO -- : (0.092162s) COMMIT
+I, [2021-05-14T10:30:31.909770 #242]  INFO -- : (0.000171s) SELECT * FROM `users` WHERE `id` = 1002
+I, [2021-05-14T10:30:31.910130 #242]  INFO -- : (0.000090s) SELECT count(*) AS 'count' FROM `users` WHERE ((`pairing_status` LIKE 0 ESCAPE '\') AND (`role` = 2) AND (`field` = 'Engineering and technology')) LIMIT 1
+I, [2021-05-14T10:30:31.910368 #242]  INFO -- : (0.000141s) SELECT * FROM `users` WHERE ((`pairing_status` LIKE 0 ESCAPE '\') AND (`role` = 2) AND (`field` = 'Engineering and technology'))
+I, [2021-05-14T10:32:24.560125 #266]  INFO -- : (0.000197s) PRAGMA foreign_keys = 1
+I, [2021-05-14T10:32:24.560213 #266]  INFO -- : (0.000014s) PRAGMA case_sensitive_like = 1
+I, [2021-05-14T10:32:24.569332 #266]  INFO -- : (0.000061s) SELECT sqlite_version()
+I, [2021-05-14T10:32:24.569553 #266]  INFO -- : (0.000093s) PRAGMA table_info('requests')
+I, [2021-05-14T10:32:24.570682 #266]  INFO -- : (0.000148s) PRAGMA table_info('users')
+I, [2021-05-14T10:32:47.600299 #266]  INFO -- : (0.000186s) SELECT * FROM `users` WHERE `id` = 1002
+I, [2021-05-14T10:32:47.600723 #266]  INFO -- : (0.000105s) SELECT count(*) AS 'count' FROM `users` WHERE ((`pairing_status` LIKE 0 ESCAPE '\') AND (`role` = 2) AND (`field` = 'Engineering and technology')) LIMIT 1
+I, [2021-05-14T10:32:47.600980 #266]  INFO -- : (0.000133s) SELECT * FROM `users` WHERE ((`pairing_status` LIKE 0 ESCAPE '\') AND (`role` = 2) AND (`field` = 'Engineering and technology'))
+I, [2021-05-14T10:32:51.806512 #266]  INFO -- : (0.000170s) SELECT * FROM `users` WHERE `id` = 1002
+I, [2021-05-14T10:32:51.806908 #266]  INFO -- : (0.000133s) SELECT * FROM `users` WHERE (`username` = 'engmentee') LIMIT 1
+I, [2021-05-14T10:32:51.807100 #266]  INFO -- : (0.000020s) BEGIN
+I, [2021-05-14T10:32:51.807498 #266]  INFO -- : (0.000229s) UPDATE `users` SET `outgoing_request` = 1 WHERE (`id` = 1002)
+I, [2021-05-14T10:32:51.893099 #266]  INFO -- : (0.085493s) COMMIT
+I, [2021-05-14T10:32:51.893876 #266]  INFO -- : (0.000335s) SELECT * FROM `users` WHERE (`username` = 'engmentee') LIMIT 1
+I, [2021-05-14T10:32:51.894099 #266]  INFO -- : (0.000026s) BEGIN
+I, [2021-05-14T10:32:51.894559 #266]  INFO -- : (0.000228s) UPDATE `users` SET `requested_to` = 1003 WHERE (`id` = 1002)
+I, [2021-05-14T10:32:51.972309 #266]  INFO -- : (0.077632s) COMMIT
+I, [2021-05-14T10:32:52.086091 #266]  INFO -- : (0.000176s) SELECT * FROM `users` WHERE `id` = 1002
+I, [2021-05-14T10:32:57.852505 #266]  INFO -- : (0.000175s) SELECT * FROM `users` WHERE `id` = 1002
+I, [2021-05-14T10:32:57.852916 #266]  INFO -- : (0.000130s) SELECT * FROM `users` WHERE (`username` = 'engmentee') LIMIT 1
+I, [2021-05-14T10:32:57.853043 #266]  INFO -- : (0.000016s) BEGIN
+I, [2021-05-14T10:32:57.853330 #266]  INFO -- : (0.000154s) UPDATE `users` SET `outgoing_request` = 0 WHERE (`id` = 1002)
+I, [2021-05-14T10:32:57.951069 #266]  INFO -- : (0.097664s) COMMIT
+I, [2021-05-14T10:32:57.951464 #266]  INFO -- : (0.000183s) SELECT * FROM `users` WHERE (`username` = 'engmentee') LIMIT 1
+I, [2021-05-14T10:32:57.951591 #266]  INFO -- : (0.000015s) BEGIN
+I, [2021-05-14T10:32:57.951888 #266]  INFO -- : (0.000161s) UPDATE `users` SET `requested_to` = 0 WHERE (`id` = 1002)
+I, [2021-05-14T10:32:58.039586 #266]  INFO -- : (0.087624s) COMMIT
+I, [2021-05-14T10:32:58.155975 #266]  INFO -- : (0.000247s) SELECT * FROM `users` WHERE `id` = 1002
+I, [2021-05-14T10:32:58.156331 #266]  INFO -- : (0.000094s) SELECT count(*) AS 'count' FROM `users` WHERE ((`pairing_status` LIKE 0 ESCAPE '\') AND (`role` = 2) AND (`field` = 'Engineering and technology')) LIMIT 1
+I, [2021-05-14T10:32:58.157196 #266]  INFO -- : (0.000761s) SELECT * FROM `users` WHERE ((`pairing_status` LIKE 0 ESCAPE '\') AND (`role` = 2) AND (`field` = 'Engineering and technology'))
+I, [2021-05-14T10:33:14.041703 #266]  INFO -- : (0.000186s) SELECT * FROM `users` WHERE (`username` = 'engmentee') LIMIT 1
+I, [2021-05-14T10:33:14.041969 #266]  INFO -- : (0.000109s) SELECT * FROM `users` WHERE (`username` = 'engmentee') LIMIT 1
+I, [2021-05-14T10:33:14.042145 #266]  INFO -- : (0.000096s) SELECT * FROM `users` WHERE (`username` = 'engmentee') LIMIT 1
+I, [2021-05-14T10:33:14.042308 #266]  INFO -- : (0.000091s) SELECT * FROM `users` WHERE (`username` = 'engmentee') LIMIT 1
+I, [2021-05-14T10:33:14.043459 #266]  INFO -- : (0.000118s) SELECT * FROM `users` WHERE (`username` = 'engmentee') LIMIT 1
+I, [2021-05-14T10:33:14.043649 #266]  INFO -- : (0.000093s) SELECT * FROM `users` WHERE (`username` = 'engmentee') LIMIT 1
+I, [2021-05-14T10:33:14.043845 #266]  INFO -- : (0.000124s) SELECT * FROM `users` WHERE (`username` = 'engmentee') LIMIT 1
+I, [2021-05-14T10:33:14.044016 #266]  INFO -- : (0.000094s) SELECT * FROM `users` WHERE (`username` = 'engmentee') LIMIT 1
+I, [2021-05-14T10:33:14.044820 #266]  INFO -- : (0.000732s) SELECT * FROM `users` WHERE (`username` = 'engmentee') LIMIT 1
+I, [2021-05-14T10:33:14.045015 #266]  INFO -- : (0.000103s) SELECT * FROM `users` WHERE (`username` = 'engmentee') LIMIT 1
+I, [2021-05-14T10:33:14.045204 #266]  INFO -- : (0.000113s) SELECT * FROM `users` WHERE (`username` = 'engmentee') LIMIT 1
+I, [2021-05-14T10:33:14.045379 #266]  INFO -- : (0.000097s) SELECT * FROM `users` WHERE (`username` = 'engmentee') LIMIT 1
+I, [2021-05-14T10:33:14.045546 #266]  INFO -- : (0.000095s) SELECT * FROM `users` WHERE (`username` = 'engmentee') LIMIT 1
+I, [2021-05-14T10:33:14.164510 #266]  INFO -- : (0.000173s) SELECT * FROM `users` WHERE `id` = 1002
+I, [2021-05-14T10:33:14.164846 #266]  INFO -- : (0.000092s) SELECT count(*) AS 'count' FROM `users` WHERE ((`pairing_status` LIKE 0 ESCAPE '\') AND (`role` = 2) AND (`field` = 'Engineering and technology')) LIMIT 1
+I, [2021-05-14T10:33:14.165074 #266]  INFO -- : (0.000127s) SELECT * FROM `users` WHERE ((`pairing_status` LIKE 0 ESCAPE '\') AND (`role` = 2) AND (`field` = 'Engineering and technology'))
+I, [2021-05-14T10:38:58.212728 #297]  INFO -- : (0.000185s) PRAGMA foreign_keys = 1
+I, [2021-05-14T10:38:58.212821 #297]  INFO -- : (0.000014s) PRAGMA case_sensitive_like = 1
+I, [2021-05-14T10:38:58.221658 #297]  INFO -- : (0.000062s) SELECT sqlite_version()
+I, [2021-05-14T10:38:58.221882 #297]  INFO -- : (0.000092s) PRAGMA table_info('requests')
+I, [2021-05-14T10:38:58.222931 #297]  INFO -- : (0.000143s) PRAGMA table_info('users')
+I, [2021-05-14T10:39:24.046394 #297]  INFO -- : (0.000236s) SELECT * FROM `users` WHERE `id` = 1002
+I, [2021-05-14T10:39:24.046907 #297]  INFO -- : (0.000131s) SELECT count(*) AS 'count' FROM `users` WHERE ((`pairing_status` LIKE 0 ESCAPE '\') AND (`role` = 2) AND (`field` = 'Engineering and technology')) LIMIT 1
+I, [2021-05-14T10:39:24.047236 #297]  INFO -- : (0.000187s) SELECT * FROM `users` WHERE ((`pairing_status` LIKE 0 ESCAPE '\') AND (`role` = 2) AND (`field` = 'Engineering and technology'))
+I, [2021-05-14T10:39:49.846162 #297]  INFO -- : (0.000168s) SELECT * FROM `users` WHERE `id` = 1002
+I, [2021-05-14T10:39:49.846559 #297]  INFO -- : (0.000132s) SELECT * FROM `users` WHERE (`username` = 'engmentee') LIMIT 1
+I, [2021-05-14T10:39:49.846733 #297]  INFO -- : (0.000021s) BEGIN
+I, [2021-05-14T10:39:49.847127 #297]  INFO -- : (0.000221s) UPDATE `users` SET `outgoing_request` = 1 WHERE (`id` = 1002)
+I, [2021-05-14T10:39:49.935875 #297]  INFO -- : (0.088645s) COMMIT
+I, [2021-05-14T10:39:49.936367 #297]  INFO -- : (0.000201s) SELECT * FROM `users` WHERE (`username` = 'engmentee') LIMIT 1
+I, [2021-05-14T10:39:49.936528 #297]  INFO -- : (0.000019s) BEGIN
+I, [2021-05-14T10:39:49.936868 #297]  INFO -- : (0.000166s) UPDATE `users` SET `requested_to` = 1003 WHERE (`id` = 1002)
+I, [2021-05-14T10:39:50.036846 #297]  INFO -- : (0.099890s) COMMIT
+I, [2021-05-14T10:39:50.151090 #297]  INFO -- : (0.000174s) SELECT * FROM `users` WHERE `id` = 1002
+I, [2021-05-14T10:39:52.946165 #297]  INFO -- : (0.000187s) SELECT * FROM `users` WHERE `id` = 1002
+I, [2021-05-14T10:39:52.946627 #297]  INFO -- : (0.000157s) SELECT * FROM `users` WHERE (`username` = 'engmentee') LIMIT 1
+I, [2021-05-14T10:39:52.946777 #297]  INFO -- : (0.000019s) BEGIN
+I, [2021-05-14T10:39:52.947122 #297]  INFO -- : (0.000189s) UPDATE `users` SET `outgoing_request` = 0 WHERE (`id` = 1002)
+I, [2021-05-14T10:39:53.040335 #297]  INFO -- : (0.093129s) COMMIT
+I, [2021-05-14T10:39:53.040748 #297]  INFO -- : (0.000196s) SELECT * FROM `users` WHERE (`username` = 'engmentee') LIMIT 1
+I, [2021-05-14T10:39:53.040907 #297]  INFO -- : (0.000020s) BEGIN
+I, [2021-05-14T10:39:53.041244 #297]  INFO -- : (0.000177s) UPDATE `users` SET `requested_to` = 0 WHERE (`id` = 1002)
+I, [2021-05-14T10:39:53.130763 #297]  INFO -- : (0.089434s) COMMIT
+I, [2021-05-14T10:39:53.246372 #297]  INFO -- : (0.000189s) SELECT * FROM `users` WHERE `id` = 1002
+I, [2021-05-14T10:39:53.246810 #297]  INFO -- : (0.000117s) SELECT count(*) AS 'count' FROM `users` WHERE ((`pairing_status` LIKE 0 ESCAPE '\') AND (`role` = 2) AND (`field` = 'Engineering and technology')) LIMIT 1
+I, [2021-05-14T10:39:53.247934 #297]  INFO -- : (0.000974s) SELECT * FROM `users` WHERE ((`pairing_status` LIKE 0 ESCAPE '\') AND (`role` = 2) AND (`field` = 'Engineering and technology'))
+I, [2021-05-14T10:42:41.521917 #10153]  INFO -- : (0.000174s) PRAGMA foreign_keys = 1
+I, [2021-05-14T10:42:41.521997 #10153]  INFO -- : (0.000014s) PRAGMA case_sensitive_like = 1
+I, [2021-05-14T10:42:41.530233 #10153]  INFO -- : (0.000054s) SELECT sqlite_version()
+I, [2021-05-14T10:42:41.530430 #10153]  INFO -- : (0.000087s) PRAGMA table_info('requests')
+I, [2021-05-14T10:42:41.531447 #10153]  INFO -- : (0.000141s) PRAGMA table_info('users')
+I, [2021-05-14T10:42:52.693357 #10153]  INFO -- : (0.000181s) SELECT * FROM `users` WHERE (`username` = 'ah1001') LIMIT 1
+I, [2021-05-14T10:42:52.693668 #10153]  INFO -- : (0.000110s) SELECT * FROM `users` WHERE (`username` = 'ah1001') LIMIT 1
+I, [2021-05-14T10:42:52.693932 #10153]  INFO -- : (0.000099s) SELECT * FROM `users` WHERE (`username` = 'ah1001') LIMIT 1
+I, [2021-05-14T10:42:52.694115 #10153]  INFO -- : (0.000090s) SELECT * FROM `users` WHERE (`username` = 'ah1001') LIMIT 1
+I, [2021-05-14T10:42:52.694266 #10153]  INFO -- : (0.000082s) SELECT * FROM `users` WHERE (`username` = 'ah1001') LIMIT 1
+I, [2021-05-14T10:42:52.694408 #10153]  INFO -- : (0.000078s) SELECT * FROM `users` WHERE (`username` = 'ah1001') LIMIT 1
+I, [2021-05-14T10:42:52.694560 #10153]  INFO -- : (0.000088s) SELECT * FROM `users` WHERE (`username` = 'ah1001') LIMIT 1
+I, [2021-05-14T10:42:52.694711 #10153]  INFO -- : (0.000085s) SELECT * FROM `users` WHERE (`username` = 'ah1001') LIMIT 1
+I, [2021-05-14T10:42:52.694860 #10153]  INFO -- : (0.000084s) SELECT * FROM `users` WHERE (`username` = 'ah1001') LIMIT 1
+I, [2021-05-14T10:42:52.694998 #10153]  INFO -- : (0.000075s) SELECT * FROM `users` WHERE (`username` = 'ah1001') LIMIT 1
+I, [2021-05-14T10:42:52.695143 #10153]  INFO -- : (0.000083s) SELECT * FROM `users` WHERE (`username` = 'ah1001') LIMIT 1
+I, [2021-05-14T10:42:52.695286 #10153]  INFO -- : (0.000082s) SELECT * FROM `users` WHERE (`username` = 'ah1001') LIMIT 1
+I, [2021-05-14T10:42:52.695429 #10153]  INFO -- : (0.000083s) SELECT * FROM `users` WHERE (`username` = 'ah1001') LIMIT 1
+I, [2021-05-14T10:42:52.825740 #10153]  INFO -- : (0.000139s) SELECT * FROM `users` WHERE `id` = 4
+I, [2021-05-14T10:42:52.826073 #10153]  INFO -- : (0.000086s) SELECT count(*) AS 'count' FROM `users` WHERE ((`pairing_status` LIKE 0 ESCAPE '\') AND (`role` = 2) AND (`field` = 'Engineering')) LIMIT 1
+I, [2021-05-14T10:42:52.826311 #10153]  INFO -- : (0.000145s) SELECT * FROM `users` WHERE ((`pairing_status` LIKE 0 ESCAPE '\') AND (`role` = 2) AND (`field` = 'Engineering'))
+I, [2021-05-14T10:42:58.487568 #10153]  INFO -- : (0.000885s) SELECT * FROM `users` WHERE `id` = 4
+I, [2021-05-14T10:42:58.487971 #10153]  INFO -- : (0.000192s) SELECT * FROM `users` WHERE (`username` = 'ah1001') LIMIT 1
+I, [2021-05-14T10:42:58.488144 #10153]  INFO -- : (0.000024s) BEGIN
+I, [2021-05-14T10:42:58.488539 #10153]  INFO -- : (0.000173s) UPDATE `users` SET `outgoing_request` = 1 WHERE (`id` = 4)
+I, [2021-05-14T10:42:58.581255 #10153]  INFO -- : (0.092621s) COMMIT
+I, [2021-05-14T10:42:58.582130 #10153]  INFO -- : (0.000646s) SELECT * FROM `users` WHERE (`username` = 'ah1001') LIMIT 1
+I, [2021-05-14T10:42:58.582307 #10153]  INFO -- : (0.000021s) BEGIN
+I, [2021-05-14T10:42:58.582686 #10153]  INFO -- : (0.000168s) UPDATE `users` SET `requested_to` = 17 WHERE (`id` = 4)
+I, [2021-05-14T10:42:58.679698 #10153]  INFO -- : (0.096934s) COMMIT
+I, [2021-05-14T10:42:58.814639 #10153]  INFO -- : (0.000160s) SELECT * FROM `users` WHERE `id` = 4
+I, [2021-05-14T10:43:00.548520 #10153]  INFO -- : (0.000162s) SELECT * FROM `users` WHERE `id` = 4
+I, [2021-05-14T10:43:00.549492 #10153]  INFO -- : (0.000134s) SELECT * FROM `users` WHERE (`username` = 'ah1001') LIMIT 1
+I, [2021-05-14T10:43:00.549629 #10153]  INFO -- : (0.000014s) BEGIN
+I, [2021-05-14T10:43:00.549906 #10153]  INFO -- : (0.000132s) UPDATE `users` SET `outgoing_request` = 0 WHERE (`id` = 4)
+I, [2021-05-14T10:43:00.636309 #10153]  INFO -- : (0.086342s) COMMIT
+I, [2021-05-14T10:43:00.636582 #10153]  INFO -- : (0.000127s) SELECT * FROM `users` WHERE (`username` = 'ah1001') LIMIT 1
+I, [2021-05-14T10:43:00.636692 #10153]  INFO -- : (0.000013s) BEGIN
+I, [2021-05-14T10:43:00.637469 #10153]  INFO -- : (0.000135s) UPDATE `users` SET `requested_to` = 0 WHERE (`id` = 4)
+I, [2021-05-14T10:43:00.731359 #10153]  INFO -- : (0.093817s) COMMIT
+I, [2021-05-14T10:43:00.872414 #10153]  INFO -- : (0.000163s) SELECT * FROM `users` WHERE `id` = 4
+I, [2021-05-14T10:43:00.872728 #10153]  INFO -- : (0.000089s) SELECT count(*) AS 'count' FROM `users` WHERE ((`pairing_status` LIKE 0 ESCAPE '\') AND (`role` = 2) AND (`field` = 'Engineering')) LIMIT 1
+I, [2021-05-14T10:43:00.872972 #10153]  INFO -- : (0.000149s) SELECT * FROM `users` WHERE ((`pairing_status` LIKE 0 ESCAPE '\') AND (`role` = 2) AND (`field` = 'Engineering'))
+I, [2021-05-14T11:12:13.349756 #10185]  INFO -- : (0.000188s) PRAGMA foreign_keys = 1
+I, [2021-05-14T11:12:13.349847 #10185]  INFO -- : (0.000015s) PRAGMA case_sensitive_like = 1
+I, [2021-05-14T11:12:13.358753 #10185]  INFO -- : (0.000058s) SELECT sqlite_version()
+I, [2021-05-14T11:12:13.359012 #10185]  INFO -- : (0.000119s) PRAGMA table_info('requests')
+I, [2021-05-14T11:12:13.360039 #10185]  INFO -- : (0.000141s) PRAGMA table_info('users')
+I, [2021-05-14T11:13:14.799699 #10185]  INFO -- : (0.000194s) SELECT * FROM `users` WHERE (`username` = 'admin') LIMIT 1
+I, [2021-05-14T11:13:14.800038 #10185]  INFO -- : (0.000124s) SELECT * FROM `users` WHERE (`username` = 'admin') LIMIT 1
+I, [2021-05-14T11:13:14.800329 #10185]  INFO -- : (0.000123s) SELECT * FROM `users` WHERE (`username` = 'admin') LIMIT 1
+I, [2021-05-14T11:13:14.800507 #10185]  INFO -- : (0.000092s) SELECT * FROM `users` WHERE (`username` = 'admin') LIMIT 1
+I, [2021-05-14T11:13:14.800663 #10185]  INFO -- : (0.000084s) SELECT * FROM `users` WHERE (`username` = 'admin') LIMIT 1
+I, [2021-05-14T11:13:14.800813 #10185]  INFO -- : (0.000083s) SELECT * FROM `users` WHERE (`username` = 'admin') LIMIT 1
+I, [2021-05-14T11:13:14.800973 #10185]  INFO -- : (0.000093s) SELECT * FROM `users` WHERE (`username` = 'admin') LIMIT 1
+I, [2021-05-14T11:13:14.801135 #10185]  INFO -- : (0.000093s) SELECT * FROM `users` WHERE (`username` = 'admin') LIMIT 1
+I, [2021-05-14T11:13:14.801292 #10185]  INFO -- : (0.000089s) SELECT * FROM `users` WHERE (`username` = 'admin') LIMIT 1
+I, [2021-05-14T11:13:14.801442 #10185]  INFO -- : (0.000082s) SELECT * FROM `users` WHERE (`username` = 'admin') LIMIT 1
+I, [2021-05-14T11:13:14.801596 #10185]  INFO -- : (0.000088s) SELECT * FROM `users` WHERE (`username` = 'admin') LIMIT 1
+I, [2021-05-14T11:13:14.801749 #10185]  INFO -- : (0.000087s) SELECT * FROM `users` WHERE (`username` = 'admin') LIMIT 1
+I, [2021-05-14T11:13:14.801902 #10185]  INFO -- : (0.000088s) SELECT * FROM `users` WHERE (`username` = 'admin') LIMIT 1
+I, [2021-05-14T11:13:14.905010 #10185]  INFO -- : (0.001018s) SELECT * FROM `users`
+I, [2021-05-14T11:14:49.618015 #10185]  INFO -- : (0.000181s) SELECT * FROM `users` WHERE (`username` = 'mentee1') LIMIT 1
+I, [2021-05-14T11:14:49.618309 #10185]  INFO -- : (0.000126s) SELECT * FROM `users` WHERE (`username` = 'mentee1') LIMIT 1
+I, [2021-05-14T11:14:49.618475 #10185]  INFO -- : (0.000090s) SELECT * FROM `users` WHERE (`username` = 'mentee1') LIMIT 1
+I, [2021-05-14T11:14:49.618629 #10185]  INFO -- : (0.000086s) SELECT * FROM `users` WHERE (`username` = 'mentee1') LIMIT 1
+I, [2021-05-14T11:14:49.618808 #10185]  INFO -- : (0.000112s) SELECT * FROM `users` WHERE (`username` = 'mentee1') LIMIT 1
+I, [2021-05-14T11:14:49.618967 #10185]  INFO -- : (0.000089s) SELECT * FROM `users` WHERE (`username` = 'mentee1') LIMIT 1
+I, [2021-05-14T11:14:49.619117 #10185]  INFO -- : (0.000086s) SELECT * FROM `users` WHERE (`username` = 'mentee1') LIMIT 1
+I, [2021-05-14T11:14:49.619282 #10185]  INFO -- : (0.000103s) SELECT * FROM `users` WHERE (`username` = 'mentee1') LIMIT 1
+I, [2021-05-14T11:14:49.619425 #10185]  INFO -- : (0.000080s) SELECT * FROM `users` WHERE (`username` = 'mentee1') LIMIT 1
+I, [2021-05-14T11:14:49.619563 #10185]  INFO -- : (0.000079s) SELECT * FROM `users` WHERE (`username` = 'mentee1') LIMIT 1
+I, [2021-05-14T11:14:49.619732 #10185]  INFO -- : (0.000104s) SELECT * FROM `users` WHERE (`username` = 'mentee1') LIMIT 1
+I, [2021-05-14T11:14:49.619878 #10185]  INFO -- : (0.000084s) SELECT * FROM `users` WHERE (`username` = 'mentee1') LIMIT 1
+I, [2021-05-14T11:14:49.620016 #10185]  INFO -- : (0.000078s) SELECT * FROM `users` WHERE (`username` = 'mentee1') LIMIT 1
+I, [2021-05-14T11:14:49.723804 #10185]  INFO -- : (0.000124s) SELECT * FROM `users` WHERE `id` = 1007
+I, [2021-05-14T11:14:49.724135 #10185]  INFO -- : (0.000086s) SELECT count(*) AS 'count' FROM `users` WHERE ((`pairing_status` LIKE 0 ESCAPE '\') AND (`role` = 2) AND (`field` = 'Computer Science')) LIMIT 1
+I, [2021-05-14T11:14:49.724454 #10185]  INFO -- : (0.000212s) SELECT * FROM `users` WHERE ((`pairing_status` LIKE 0 ESCAPE '\') AND (`role` = 2) AND (`field` = 'Computer Science'))
+I, [2021-06-04T08:20:01.284358 #273]  INFO -- : (0.001914s) PRAGMA foreign_keys = 1
+I, [2021-06-04T08:20:01.287906 #273]  INFO -- : (0.000032s) PRAGMA case_sensitive_like = 1
+I, [2021-06-04T08:20:01.302221 #273]  INFO -- : (0.000086s) SELECT sqlite_version()
+I, [2021-06-04T08:20:01.302532 #273]  INFO -- : (0.000131s) PRAGMA table_info('requests')
+I, [2021-06-04T08:20:01.310177 #273]  INFO -- : (0.000160s) PRAGMA table_info('users')
+I, [2021-06-04T08:22:44.096066 #273]  INFO -- : (0.004776s) SELECT * FROM `users` WHERE (`username` = 'gj1001') LIMIT 1
+I, [2021-06-04T08:22:44.096405 #273]  INFO -- : (0.000130s) SELECT * FROM `users` WHERE (`username` = 'gj1001') LIMIT 1
+I, [2021-06-04T08:22:44.096672 #273]  INFO -- : (0.000101s) SELECT * FROM `users` WHERE (`username` = 'gj1001') LIMIT 1
+I, [2021-06-04T08:22:44.096843 #273]  INFO -- : (0.000090s) SELECT * FROM `users` WHERE (`username` = 'gj1001') LIMIT 1
+I, [2021-06-04T08:22:44.097000 #273]  INFO -- : (0.000086s) SELECT * FROM `users` WHERE (`username` = 'gj1001') LIMIT 1
+I, [2021-06-04T08:22:44.097152 #273]  INFO -- : (0.000083s) SELECT * FROM `users` WHERE (`username` = 'gj1001') LIMIT 1
+I, [2021-06-04T08:22:44.097300 #273]  INFO -- : (0.000083s) SELECT * FROM `users` WHERE (`username` = 'gj1001') LIMIT 1
+I, [2021-06-04T08:22:44.097447 #273]  INFO -- : (0.000082s) SELECT * FROM `users` WHERE (`username` = 'gj1001') LIMIT 1
+I, [2021-06-04T08:22:44.097593 #273]  INFO -- : (0.000081s) SELECT * FROM `users` WHERE (`username` = 'gj1001') LIMIT 1
+I, [2021-06-04T08:22:44.097738 #273]  INFO -- : (0.000080s) SELECT * FROM `users` WHERE (`username` = 'gj1001') LIMIT 1
+I, [2021-06-04T08:22:44.097886 #273]  INFO -- : (0.000081s) SELECT * FROM `users` WHERE (`username` = 'gj1001') LIMIT 1
+I, [2021-06-04T08:22:44.098029 #273]  INFO -- : (0.000079s) SELECT * FROM `users` WHERE (`username` = 'gj1001') LIMIT 1
+I, [2021-06-04T08:22:44.098171 #273]  INFO -- : (0.000079s) SELECT * FROM `users` WHERE (`username` = 'gj1001') LIMIT 1
+I, [2021-06-04T08:22:44.423849 #273]  INFO -- : (0.000197s) SELECT * FROM `users` WHERE `id` = 2
+I, [2021-06-04T08:22:44.424232 #273]  INFO -- : (0.000096s) SELECT count(*) AS 'count' FROM `users` WHERE ((`pairing_status` LIKE 0 ESCAPE '\') AND (`role` = 2) AND (`field` = 'Engineering')) LIMIT 1
+I, [2021-06-04T08:22:44.424569 #273]  INFO -- : (0.000194s) SELECT * FROM `users` WHERE ((`pairing_status` LIKE 0 ESCAPE '\') AND (`role` = 2) AND (`field` = 'Engineering'))
+I, [2021-06-04T08:22:59.789029 #273]  INFO -- : (0.000778s) SELECT * FROM `users` WHERE `id` = 2
+I, [2021-06-04T08:22:59.789408 #273]  INFO -- : (0.000110s) SELECT count(*) AS 'count' FROM `users` WHERE ((`pairing_status` LIKE 0 ESCAPE '\') AND (`role` = 2) AND (`field` = 'Engineering')) LIMIT 1
+I, [2021-06-04T08:22:59.789672 #273]  INFO -- : (0.000164s) SELECT * FROM `users` WHERE ((`pairing_status` LIKE 0 ESCAPE '\') AND (`role` = 2) AND (`field` = 'Engineering'))
+I, [2021-06-04T08:23:17.552514 #273]  INFO -- : (0.000183s) SELECT * FROM `users` WHERE (`username` = 'gj1001') LIMIT 1
+I, [2021-06-04T08:23:17.553531 #273]  INFO -- : (0.000833s) SELECT * FROM `users` WHERE (`username` = 'gj1001') LIMIT 1
+I, [2021-06-04T08:23:17.553755 #273]  INFO -- : (0.000111s) SELECT * FROM `users` WHERE (`username` = 'gj1001') LIMIT 1
+I, [2021-06-04T08:23:17.553939 #273]  INFO -- : (0.000098s) SELECT * FROM `users` WHERE (`username` = 'gj1001') LIMIT 1
+I, [2021-06-04T08:23:17.554120 #273]  INFO -- : (0.000100s) SELECT * FROM `users` WHERE (`username` = 'gj1001') LIMIT 1
+I, [2021-06-04T08:23:17.554972 #273]  INFO -- : (0.000770s) SELECT * FROM `users` WHERE (`username` = 'gj1001') LIMIT 1
+I, [2021-06-04T08:23:17.555171 #273]  INFO -- : (0.000099s) SELECT * FROM `users` WHERE (`username` = 'gj1001') LIMIT 1
+I, [2021-06-04T08:23:17.555351 #273]  INFO -- : (0.000098s) SELECT * FROM `users` WHERE (`username` = 'gj1001') LIMIT 1
+I, [2021-06-04T08:23:17.556239 #273]  INFO -- : (0.000806s) SELECT * FROM `users` WHERE (`username` = 'gj1001') LIMIT 1
+I, [2021-06-04T08:23:17.556452 #273]  INFO -- : (0.000110s) SELECT * FROM `users` WHERE (`username` = 'gj1001') LIMIT 1
+I, [2021-06-04T08:23:17.556652 #273]  INFO -- : (0.000098s) SELECT * FROM `users` WHERE (`username` = 'gj1001') LIMIT 1
+I, [2021-06-04T08:23:17.556829 #273]  INFO -- : (0.000096s) SELECT * FROM `users` WHERE (`username` = 'gj1001') LIMIT 1
+I, [2021-06-04T08:23:17.557781 #273]  INFO -- : (0.000871s) SELECT * FROM `users` WHERE (`username` = 'gj1001') LIMIT 1
+I, [2021-06-04T08:23:17.843695 #273]  INFO -- : (0.000668s) SELECT * FROM `users` WHERE `id` = 2
+I, [2021-06-04T08:23:17.844109 #273]  INFO -- : (0.000114s) SELECT count(*) AS 'count' FROM `users` WHERE ((`pairing_status` LIKE 0 ESCAPE '\') AND (`role` = 2) AND (`field` = 'Engineering')) LIMIT 1
+I, [2021-06-04T08:23:17.844406 #273]  INFO -- : (0.000171s) SELECT * FROM `users` WHERE ((`pairing_status` LIKE 0 ESCAPE '\') AND (`role` = 2) AND (`field` = 'Engineering'))
+I, [2021-06-04T08:23:28.917359 #273]  INFO -- : (0.000175s) SELECT * FROM `users` WHERE `id` = 2
+I, [2021-06-04T08:23:28.919811 #273]  INFO -- : (0.000131s) SELECT count(*) AS 'count' FROM `users` WHERE ((`pairing_status` LIKE 0 ESCAPE '\') AND (`role` = 2) AND (`field` = 'Engineering')) LIMIT 1
+I, [2021-06-04T08:23:28.920096 #273]  INFO -- : (0.000161s) SELECT * FROM `users` WHERE ((`pairing_status` LIKE 0 ESCAPE '\') AND (`role` = 2) AND (`field` = 'Engineering'))
+I, [2021-06-04T08:23:43.776308 #273]  INFO -- : (0.000180s) SELECT * FROM `users` WHERE `id` = 2
+I, [2021-06-04T08:23:43.776663 #273]  INFO -- : (0.000093s) SELECT count(*) AS 'count' FROM `users` WHERE ((`pairing_status` LIKE 0 ESCAPE '\') AND (`role` = 2) AND (`field` = 'Engineering')) LIMIT 1
+I, [2021-06-04T08:23:43.776919 #273]  INFO -- : (0.000161s) SELECT * FROM `users` WHERE ((`pairing_status` LIKE 0 ESCAPE '\') AND (`role` = 2) AND (`field` = 'Engineering'))
+I, [2021-06-04T08:23:51.744407 #273]  INFO -- : (0.000175s) SELECT * FROM `users` WHERE `id` = 2
+I, [2021-06-04T08:23:51.744824 #273]  INFO -- : (0.000110s) SELECT count(*) AS 'count' FROM `users` WHERE ((`pairing_status` LIKE 0 ESCAPE '\') AND (`role` = 2) AND (`field` = 'Engineering')) LIMIT 1
+I, [2021-06-04T08:23:51.745140 #273]  INFO -- : (0.000187s) SELECT * FROM `users` WHERE ((`pairing_status` LIKE 0 ESCAPE '\') AND (`role` = 2) AND (`field` = 'Engineering'))
+I, [2021-06-04T08:23:59.512282 #273]  INFO -- : (0.000171s) SELECT * FROM `users` WHERE `id` = 2
+I, [2021-06-04T08:23:59.512573 #273]  INFO -- : (0.000113s) SELECT * FROM `users` WHERE (`username` = 'gj1001') LIMIT 1
+I, [2021-06-04T08:23:59.512721 #273]  INFO -- : (0.000020s) BEGIN
+I, [2021-06-04T08:23:59.513094 #273]  INFO -- : (0.000201s) UPDATE `users` SET `outgoing_request` = 1 WHERE (`id` = 2)
+I, [2021-06-04T08:23:59.606876 #273]  INFO -- : (0.093698s) COMMIT
+I, [2021-06-04T08:23:59.607265 #273]  INFO -- : (0.000175s) SELECT * FROM `users` WHERE (`username` = 'gj1001') LIMIT 1
+I, [2021-06-04T08:23:59.607393 #273]  INFO -- : (0.000015s) BEGIN
+I, [2021-06-04T08:23:59.607683 #273]  INFO -- : (0.000138s) UPDATE `users` SET `requested_to` = 16 WHERE (`id` = 2)
+I, [2021-06-04T08:23:59.701617 #273]  INFO -- : (0.093860s) COMMIT
+I, [2021-06-04T08:23:59.981000 #273]  INFO -- : (0.000170s) SELECT * FROM `users` WHERE `id` = 2
+I, [2021-06-04T08:24:06.218928 #273]  INFO -- : (0.000173s) SELECT * FROM `users` WHERE `id` = 2
+I, [2021-06-04T08:24:06.219236 #273]  INFO -- : (0.000125s) SELECT * FROM `users` WHERE (`username` = 'gj1001') LIMIT 1
+I, [2021-06-04T08:24:06.219454 #273]  INFO -- : (0.000106s) SELECT * FROM `users` WHERE (`username` = 'gj1001') LIMIT 1
+I, [2021-06-04T08:24:06.525945 #273]  INFO -- : (0.000169s) SELECT * FROM `users` WHERE `id` = 2
+I, [2021-06-04T08:24:08.809816 #273]  INFO -- : (0.000170s) SELECT * FROM `users` WHERE `id` = 2
+I, [2021-06-04T08:24:08.810104 #273]  INFO -- : (0.000115s) SELECT * FROM `users` WHERE (`username` = 'gj1001') LIMIT 1
+I, [2021-06-04T08:24:08.810229 #273]  INFO -- : (0.000015s) BEGIN
+I, [2021-06-04T08:24:08.810514 #273]  INFO -- : (0.000143s) UPDATE `users` SET `outgoing_request` = 0 WHERE (`id` = 2)
+I, [2021-06-04T08:24:08.897133 #273]  INFO -- : (0.086535s) COMMIT
+I, [2021-06-04T08:24:08.897545 #273]  INFO -- : (0.000179s) SELECT * FROM `users` WHERE (`username` = 'gj1001') LIMIT 1
+I, [2021-06-04T08:24:08.897674 #273]  INFO -- : (0.000015s) BEGIN
+I, [2021-06-04T08:24:08.897938 #273]  INFO -- : (0.000128s) UPDATE `users` SET `requested_to` = 0 WHERE (`id` = 2)
+I, [2021-06-04T08:24:09.009989 #273]  INFO -- : (0.111969s) COMMIT
+I, [2021-06-04T08:24:09.351613 #273]  INFO -- : (0.000169s) SELECT * FROM `users` WHERE `id` = 2
+I, [2021-06-04T08:24:09.352024 #273]  INFO -- : (0.000099s) SELECT count(*) AS 'count' FROM `users` WHERE ((`pairing_status` LIKE 0 ESCAPE '\') AND (`role` = 2) AND (`field` = 'Engineering')) LIMIT 1
+I, [2021-06-04T08:24:09.352273 #273]  INFO -- : (0.000150s) SELECT * FROM `users` WHERE ((`pairing_status` LIKE 0 ESCAPE '\') AND (`role` = 2) AND (`field` = 'Engineering'))
+I, [2021-06-04T08:24:25.404372 #273]  INFO -- : (0.000169s) SELECT * FROM `users` WHERE `id` = 2
+I, [2021-06-04T08:24:25.404735 #273]  INFO -- : (0.000096s) SELECT count(*) AS 'count' FROM `users` WHERE ((`pairing_status` LIKE 0 ESCAPE '\') AND (`role` = 2) AND (`field` = 'Engineering')) LIMIT 1
+I, [2021-06-04T08:24:25.405015 #273]  INFO -- : (0.000184s) SELECT * FROM `users` WHERE ((`pairing_status` LIKE 0 ESCAPE '\') AND (`role` = 2) AND (`field` = 'Engineering'))
+I, [2021-06-04T08:24:29.092370 #273]  INFO -- : (0.000197s) SELECT * FROM `users` WHERE `id` = 2
+I, [2021-06-04T08:24:29.092717 #273]  INFO -- : (0.000157s) SELECT * FROM `users` WHERE (`username` = 'gj1001') LIMIT 1
+I, [2021-06-04T08:24:29.092871 #273]  INFO -- : (0.000019s) BEGIN
+I, [2021-06-04T08:24:29.093255 #273]  INFO -- : (0.000215s) UPDATE `users` SET `outgoing_request` = 1 WHERE (`id` = 2)
+I, [2021-06-04T08:24:29.166970 #273]  INFO -- : (0.073629s) COMMIT
+I, [2021-06-04T08:24:29.167353 #273]  INFO -- : (0.000178s) SELECT * FROM `users` WHERE (`username` = 'gj1001') LIMIT 1
+I, [2021-06-04T08:24:29.167510 #273]  INFO -- : (0.000015s) BEGIN
+I, [2021-06-04T08:24:29.167809 #273]  INFO -- : (0.000161s) UPDATE `users` SET `requested_to` = 16 WHERE (`id` = 2)
+I, [2021-06-04T08:24:29.241514 #273]  INFO -- : (0.073625s) COMMIT
+I, [2021-06-04T08:24:29.523656 #273]  INFO -- : (0.000169s) SELECT * FROM `users` WHERE `id` = 2
+I, [2021-06-04T08:24:31.908381 #273]  INFO -- : (0.000186s) SELECT * FROM `users` WHERE `id` = 2
+I, [2021-06-04T08:24:35.132535 #273]  INFO -- : (0.000171s) SELECT * FROM `users` WHERE `id` = 2
+I, [2021-06-04T08:24:40.940362 #273]  INFO -- : (0.000173s) SELECT * FROM `users` WHERE `id` = 2
+I, [2021-06-04T08:24:43.907867 #273]  INFO -- : (0.000206s) SELECT * FROM `users` WHERE `id` = 2
+I, [2021-06-04T08:24:43.908152 #273]  INFO -- : (0.000117s) SELECT * FROM `users` WHERE (`username` = 'gj1001') LIMIT 1
+I, [2021-06-04T08:24:43.908273 #273]  INFO -- : (0.000015s) BEGIN
+I, [2021-06-04T08:24:43.908565 #273]  INFO -- : (0.000157s) UPDATE `users` SET `outgoing_request` = 0 WHERE (`id` = 2)
+I, [2021-06-04T08:24:43.986604 #273]  INFO -- : (0.077949s) COMMIT
+I, [2021-06-04T08:24:43.987032 #273]  INFO -- : (0.000202s) SELECT * FROM `users` WHERE (`username` = 'gj1001') LIMIT 1
+I, [2021-06-04T08:24:43.987204 #273]  INFO -- : (0.000021s) BEGIN
+I, [2021-06-04T08:24:43.987536 #273]  INFO -- : (0.000157s) UPDATE `users` SET `requested_to` = 0 WHERE (`id` = 2)
+I, [2021-06-04T08:24:44.086226 #273]  INFO -- : (0.098599s) COMMIT
+I, [2021-06-04T08:24:44.368949 #273]  INFO -- : (0.000176s) SELECT * FROM `users` WHERE `id` = 2
+I, [2021-06-04T08:24:44.369352 #273]  INFO -- : (0.000107s) SELECT count(*) AS 'count' FROM `users` WHERE ((`pairing_status` LIKE 0 ESCAPE '\') AND (`role` = 2) AND (`field` = 'Engineering')) LIMIT 1
+I, [2021-06-04T08:24:44.369634 #273]  INFO -- : (0.000155s) SELECT * FROM `users` WHERE ((`pairing_status` LIKE 0 ESCAPE '\') AND (`role` = 2) AND (`field` = 'Engineering'))
+I, [2021-06-04T08:24:47.295038 #273]  INFO -- : (0.000167s) SELECT * FROM `users` WHERE `id` = 2
+I, [2021-06-04T08:24:47.295371 #273]  INFO -- : (0.000150s) SELECT * FROM `users` WHERE (`username` = 'gj1001') LIMIT 1
+I, [2021-06-04T08:24:47.295532 #273]  INFO -- : (0.000017s) BEGIN
+I, [2021-06-04T08:24:47.295860 #273]  INFO -- : (0.000170s) UPDATE `users` SET `outgoing_request` = 1 WHERE (`id` = 2)
+I, [2021-06-04T08:24:47.384583 #273]  INFO -- : (0.088647s) COMMIT
+I, [2021-06-04T08:24:47.384944 #273]  INFO -- : (0.000168s) SELECT * FROM `users` WHERE (`username` = 'gj1001') LIMIT 1
+I, [2021-06-04T08:24:47.385069 #273]  INFO -- : (0.000015s) BEGIN
+I, [2021-06-04T08:24:47.385340 #273]  INFO -- : (0.000139s) UPDATE `users` SET `requested_to` = 18 WHERE (`id` = 2)
+I, [2021-06-04T08:24:47.478827 #273]  INFO -- : (0.093418s) COMMIT
+I, [2021-06-04T08:24:47.765007 #273]  INFO -- : (0.000169s) SELECT * FROM `users` WHERE `id` = 2
+I, [2021-06-04T08:24:49.506357 #273]  INFO -- : (0.000173s) SELECT * FROM `users` WHERE `id` = 2
+I, [2021-06-04T08:24:50.967492 #273]  INFO -- : (0.000171s) SELECT * FROM `users` WHERE `id` = 2
+I, [2021-06-04T08:24:50.967832 #273]  INFO -- : (0.000162s) SELECT * FROM `users` WHERE (`username` = 'gj1001') LIMIT 1
+I, [2021-06-04T08:24:50.967974 #273]  INFO -- : (0.000017s) BEGIN
+I, [2021-06-04T08:24:50.968296 #273]  INFO -- : (0.000169s) UPDATE `users` SET `outgoing_request` = 0 WHERE (`id` = 2)
+I, [2021-06-04T08:24:51.080074 #273]  INFO -- : (0.111692s) COMMIT
+I, [2021-06-04T08:24:51.080457 #273]  INFO -- : (0.000176s) SELECT * FROM `users` WHERE (`username` = 'gj1001') LIMIT 1
+I, [2021-06-04T08:24:51.080590 #273]  INFO -- : (0.000016s) BEGIN
+I, [2021-06-04T08:24:51.080892 #273]  INFO -- : (0.000149s) UPDATE `users` SET `requested_to` = 0 WHERE (`id` = 2)
+I, [2021-06-04T08:24:51.172646 #273]  INFO -- : (0.091670s) COMMIT
+I, [2021-06-04T08:24:51.468366 #273]  INFO -- : (0.000168s) SELECT * FROM `users` WHERE `id` = 2
+I, [2021-06-04T08:24:51.468718 #273]  INFO -- : (0.000095s) SELECT count(*) AS 'count' FROM `users` WHERE ((`pairing_status` LIKE 0 ESCAPE '\') AND (`role` = 2) AND (`field` = 'Engineering')) LIMIT 1
+I, [2021-06-04T08:24:51.468965 #273]  INFO -- : (0.000153s) SELECT * FROM `users` WHERE ((`pairing_status` LIKE 0 ESCAPE '\') AND (`role` = 2) AND (`field` = 'Engineering'))
+I, [2021-06-04T12:50:20.392153 #147]  INFO -- : (0.000240s) PRAGMA foreign_keys = 1
+I, [2021-06-04T12:50:20.401214 #147]  INFO -- : (0.000040s) PRAGMA case_sensitive_like = 1
+I, [2021-06-04T12:50:20.411504 #147]  INFO -- : (0.000078s) SELECT sqlite_version()
+I, [2021-06-04T12:50:20.411754 #147]  INFO -- : (0.000103s) PRAGMA table_info('requests')
+I, [2021-06-04T12:50:20.419787 #147]  INFO -- : (0.000199s) PRAGMA table_info('users')
+I, [2021-06-04T12:52:24.078488 #153]  INFO -- : (0.000200s) PRAGMA foreign_keys = 1
+I, [2021-06-04T12:52:24.078594 #153]  INFO -- : (0.000015s) PRAGMA case_sensitive_like = 1
+I, [2021-06-04T12:52:24.088582 #153]  INFO -- : (0.000081s) SELECT sqlite_version()
+I, [2021-06-04T12:52:24.088838 #153]  INFO -- : (0.000103s) PRAGMA table_info('requests')
+I, [2021-06-04T12:52:24.090027 #153]  INFO -- : (0.000155s) PRAGMA table_info('users')
+I, [2021-11-03T20:25:08.469959 #266]  INFO -- : (0.000266s) PRAGMA foreign_keys = 1
+I, [2021-11-03T20:25:08.470101 #266]  INFO -- : (0.000027s) PRAGMA case_sensitive_like = 1
+I, [2021-11-03T20:25:08.480766 #266]  INFO -- : (0.000085s) SELECT sqlite_version()
+I, [2021-11-03T20:25:08.481025 #266]  INFO -- : (0.000100s) PRAGMA table_info('requests')
+I, [2021-11-03T20:25:08.482251 #266]  INFO -- : (0.000157s) PRAGMA table_info('users')
+I, [2021-11-03T20:35:32.246154 #266]  INFO -- : (0.000249s) SELECT * FROM `users` WHERE (`username` = 'mentee2') LIMIT 1
+I, [2021-11-03T20:35:32.246548 #266]  INFO -- : (0.000156s) SELECT * FROM `users` WHERE (`username` = 'mentee2') LIMIT 1
+I, [2021-11-03T20:35:32.247476 #266]  INFO -- : (0.000684s) SELECT * FROM `users` WHERE (`username` = 'mentee2') LIMIT 1
+I, [2021-11-03T20:35:32.247737 #266]  INFO -- : (0.000157s) SELECT * FROM `users` WHERE (`username` = 'mentee2') LIMIT 1
+I, [2021-11-03T20:35:32.247944 #266]  INFO -- : (0.000111s) SELECT * FROM `users` WHERE (`username` = 'mentee2') LIMIT 1
+I, [2021-11-03T20:35:32.248160 #266]  INFO -- : (0.000123s) SELECT * FROM `users` WHERE (`username` = 'mentee2') LIMIT 1
+I, [2021-11-03T20:35:32.248414 #266]  INFO -- : (0.000138s) SELECT * FROM `users` WHERE (`username` = 'mentee2') LIMIT 1
+I, [2021-11-03T20:35:32.249350 #266]  INFO -- : (0.000153s) SELECT * FROM `users` WHERE (`username` = 'mentee2') LIMIT 1
+I, [2021-11-03T20:35:32.249582 #266]  INFO -- : (0.000133s) SELECT * FROM `users` WHERE (`username` = 'mentee2') LIMIT 1
+I, [2021-11-03T20:35:32.249807 #266]  INFO -- : (0.000133s) SELECT * FROM `users` WHERE (`username` = 'mentee2') LIMIT 1
+I, [2021-11-03T20:35:32.249994 #266]  INFO -- : (0.000096s) SELECT * FROM `users` WHERE (`username` = 'mentee2') LIMIT 1
+I, [2021-11-03T20:35:32.250207 #266]  INFO -- : (0.000117s) SELECT * FROM `users` WHERE (`username` = 'mentee2') LIMIT 1
+I, [2021-11-03T20:35:32.251227 #266]  INFO -- : (0.000133s) SELECT * FROM `users` WHERE (`username` = 'mentee2') LIMIT 1
+I, [2021-11-03T20:35:32.357451 #266]  INFO -- : (0.000184s) SELECT * FROM `users` WHERE `id` = 1008
+I, [2021-11-03T20:35:32.357870 #266]  INFO -- : (0.000103s) SELECT count(*) AS 'count' FROM `users` WHERE ((`pairing_status` LIKE 0 ESCAPE '\') AND (`role` = 2) AND (`field` = 'Computer Science')) LIMIT 1
+I, [2021-11-03T20:35:32.361506 #266]  INFO -- : (0.003520s) SELECT * FROM `users` WHERE ((`pairing_status` LIKE 0 ESCAPE '\') AND (`role` = 2) AND (`field` = 'Computer Science'))
+I, [2021-11-03T20:35:40.541986 #266]  INFO -- : (0.000197s) SELECT * FROM `users` WHERE `id` = 1008
+I, [2021-11-03T20:35:40.542401 #266]  INFO -- : (0.000114s) SELECT count(*) AS 'count' FROM `users` WHERE ((`pairing_status` LIKE 0 ESCAPE '\') AND (`role` = 2) AND (`field` = 'Computer Science')) LIMIT 1
+I, [2021-11-03T20:35:40.542844 #266]  INFO -- : (0.000325s) SELECT * FROM `users` WHERE ((`pairing_status` LIKE 0 ESCAPE '\') AND (`role` = 2) AND (`field` = 'Computer Science'))
+I, [2021-11-03T20:36:25.575608 #266]  INFO -- : (0.000182s) SELECT * FROM `users` WHERE (`username` = 'hy1001') LIMIT 1
+I, [2021-11-03T20:36:25.575875 #266]  INFO -- : (0.000107s) SELECT * FROM `users` WHERE (`username` = 'hy1001') LIMIT 1
+I, [2021-11-03T20:36:25.576045 #266]  INFO -- : (0.000093s) SELECT * FROM `users` WHERE (`username` = 'hy1001') LIMIT 1
+I, [2021-11-03T20:36:25.576196 #266]  INFO -- : (0.000081s) SELECT * FROM `users` WHERE (`username` = 'hy1001') LIMIT 1
+I, [2021-11-03T20:36:25.576348 #266]  INFO -- : (0.000088s) SELECT * FROM `users` WHERE (`username` = 'hy1001') LIMIT 1
+I, [2021-11-03T20:36:25.576548 #266]  INFO -- : (0.000131s) SELECT * FROM `users` WHERE (`username` = 'hy1001') LIMIT 1
+I, [2021-11-03T20:36:25.576723 #266]  INFO -- : (0.000094s) SELECT * FROM `users` WHERE (`username` = 'hy1001') LIMIT 1
+I, [2021-11-03T20:36:25.577698 #266]  INFO -- : (0.000861s) SELECT * FROM `users` WHERE (`username` = 'hy1001') LIMIT 1
+I, [2021-11-03T20:36:25.577917 #266]  INFO -- : (0.000118s) SELECT * FROM `users` WHERE (`username` = 'hy1001') LIMIT 1
+I, [2021-11-03T20:36:25.578099 #266]  INFO -- : (0.000102s) SELECT * FROM `users` WHERE (`username` = 'hy1001') LIMIT 1
+I, [2021-11-03T20:36:25.578970 #266]  INFO -- : (0.000794s) SELECT * FROM `users` WHERE (`username` = 'hy1001') LIMIT 1
+I, [2021-11-03T20:36:25.579161 #266]  INFO -- : (0.000101s) SELECT * FROM `users` WHERE (`username` = 'hy1001') LIMIT 1
+I, [2021-11-03T20:36:25.579322 #266]  INFO -- : (0.000090s) SELECT * FROM `users` WHERE (`username` = 'hy1001') LIMIT 1
+I, [2021-11-03T20:36:25.686716 #266]  INFO -- : (0.000202s) SELECT * FROM `users` WHERE `id` = 1
+I, [2021-11-03T20:36:25.687777 #266]  INFO -- : (0.000151s) SELECT count(*) AS 'count' FROM `users` WHERE ((`pairing_status` LIKE 0 ESCAPE '\') AND (`role` = 2) AND (`field` = 'Business')) LIMIT 1
+I, [2021-11-03T20:36:25.688048 #266]  INFO -- : (0.000141s) SELECT * FROM `users` WHERE ((`pairing_status` LIKE 0 ESCAPE '\') AND (`role` = 2) AND (`field` = 'Business'))
+I, [2021-11-03T20:36:29.954572 #266]  INFO -- : (0.001312s) SELECT * FROM `users` WHERE `id` = 1
+I, [2021-11-03T20:36:29.955025 #266]  INFO -- : (0.000189s) SELECT * FROM `users` WHERE (`username` = 'hy1001') LIMIT 1
+I, [2021-11-03T20:36:29.955264 #266]  INFO -- : (0.000030s) BEGIN
+I, [2021-11-03T20:36:29.955786 #266]  INFO -- : (0.000268s) UPDATE `users` SET `outgoing_request` = 1 WHERE (`id` = 1)
+I, [2021-11-03T20:36:30.022796 #266]  INFO -- : (0.066905s) COMMIT
+I, [2021-11-03T20:36:30.024094 #266]  INFO -- : (0.001062s) SELECT * FROM `users` WHERE (`username` = 'hy1001') LIMIT 1
+I, [2021-11-03T20:36:30.024269 #266]  INFO -- : (0.000024s) BEGIN
+I, [2021-11-03T20:36:30.024590 #266]  INFO -- : (0.000157s) UPDATE `users` SET `requested_to` = 12 WHERE (`id` = 1)
+I, [2021-11-03T20:36:30.104253 #266]  INFO -- : (0.079576s) COMMIT
+I, [2021-11-03T20:36:30.212346 #266]  INFO -- : (0.000797s) SELECT * FROM `users` WHERE `id` = 1
+I, [2021-11-03T20:36:35.220265 #266]  INFO -- : (0.000174s) SELECT * FROM `users` WHERE `id` = 1
+I, [2021-11-03T20:36:35.220568 #266]  INFO -- : (0.000125s) SELECT * FROM `users` WHERE (`username` = 'hy1001') LIMIT 1
+I, [2021-11-03T20:36:35.220730 #266]  INFO -- : (0.000019s) BEGIN
+I, [2021-11-03T20:36:35.221714 #266]  INFO -- : (0.000151s) UPDATE `users` SET `outgoing_request` = 0 WHERE (`id` = 1)
+I, [2021-11-03T20:36:35.296715 #266]  INFO -- : (0.074885s) COMMIT
+I, [2021-11-03T20:36:35.297112 #266]  INFO -- : (0.000180s) SELECT * FROM `users` WHERE (`username` = 'hy1001') LIMIT 1
+I, [2021-11-03T20:36:35.297250 #266]  INFO -- : (0.000016s) BEGIN
+I, [2021-11-03T20:36:35.297520 #266]  INFO -- : (0.000131s) UPDATE `users` SET `requested_to` = 0 WHERE (`id` = 1)
+I, [2021-11-03T20:36:35.365483 #266]  INFO -- : (0.067881s) COMMIT
+I, [2021-11-03T20:36:35.473652 #266]  INFO -- : (0.000748s) SELECT * FROM `users` WHERE `id` = 1
+I, [2021-11-03T20:36:35.474086 #266]  INFO -- : (0.000111s) SELECT count(*) AS 'count' FROM `users` WHERE ((`pairing_status` LIKE 0 ESCAPE '\') AND (`role` = 2) AND (`field` = 'Business')) LIMIT 1
+I, [2021-11-03T20:36:35.477467 #266]  INFO -- : (0.003265s) SELECT * FROM `users` WHERE ((`pairing_status` LIKE 0 ESCAPE '\') AND (`role` = 2) AND (`field` = 'Business'))
+I, [2021-11-03T20:36:46.816917 #266]  INFO -- : (0.000227s) SELECT * FROM `users` WHERE `id` = 1
+I, [2021-11-03T20:36:46.817337 #266]  INFO -- : (0.000114s) SELECT count(*) AS 'count' FROM `users` WHERE ((`pairing_status` LIKE 0 ESCAPE '\') AND (`role` = 2) AND (`field` = 'Business')) LIMIT 1
+I, [2021-11-03T20:36:46.817644 #266]  INFO -- : (0.000186s) SELECT * FROM `users` WHERE ((`pairing_status` LIKE 0 ESCAPE '\') AND (`role` = 2) AND (`field` = 'Business'))
+I, [2021-11-03T20:36:55.587592 #266]  INFO -- : (0.000239s) SELECT * FROM `users` WHERE `id` = 1
+I, [2021-11-03T20:36:55.588389 #266]  INFO -- : (0.000217s) SELECT * FROM `users` WHERE (`username` = 'hy1001') LIMIT 1
+I, [2021-11-03T20:36:55.588580 #266]  INFO -- : (0.000024s) BEGIN
+I, [2021-11-03T20:36:55.589181 #266]  INFO -- : (0.000403s) UPDATE `users` SET `outgoing_request` = 1 WHERE (`id` = 1)
+I, [2021-11-03T20:36:55.661722 #266]  INFO -- : (0.072410s) COMMIT
+I, [2021-11-03T20:36:55.662253 #266]  INFO -- : (0.000247s) SELECT * FROM `users` WHERE (`username` = 'hy1001') LIMIT 1
+I, [2021-11-03T20:36:55.662440 #266]  INFO -- : (0.000022s) BEGIN
+I, [2021-11-03T20:36:55.662863 #266]  INFO -- : (0.000179s) UPDATE `users` SET `requested_to` = 12 WHERE (`id` = 1)
+I, [2021-11-03T20:36:55.734839 #266]  INFO -- : (0.071884s) COMMIT
+I, [2021-11-03T20:36:55.883841 #266]  INFO -- : (0.000232s) SELECT * FROM `users` WHERE `id` = 1
+I, [2021-11-03T20:36:58.666461 #266]  INFO -- : (0.000229s) SELECT * FROM `users` WHERE `id` = 1
+I, [2021-11-03T20:36:58.667911 #266]  INFO -- : (0.000208s) SELECT * FROM `users` WHERE (`username` = 'hy1001') LIMIT 1
+I, [2021-11-03T20:36:58.668098 #266]  INFO -- : (0.000021s) BEGIN
+I, [2021-11-03T20:36:58.668564 #266]  INFO -- : (0.000214s) UPDATE `users` SET `outgoing_request` = 0 WHERE (`id` = 1)
+I, [2021-11-03T20:36:58.738366 #266]  INFO -- : (0.069705s) COMMIT
+I, [2021-11-03T20:36:58.738857 #266]  INFO -- : (0.000264s) SELECT * FROM `users` WHERE (`username` = 'hy1001') LIMIT 1
+I, [2021-11-03T20:36:58.739110 #266]  INFO -- : (0.000024s) BEGIN
+I, [2021-11-03T20:36:58.739768 #266]  INFO -- : (0.000411s) UPDATE `users` SET `requested_to` = 0 WHERE (`id` = 1)
+I, [2021-11-03T20:36:58.816383 #266]  INFO -- : (0.076486s) COMMIT
+I, [2021-11-03T20:36:58.984349 #266]  INFO -- : (0.000224s) SELECT * FROM `users` WHERE `id` = 1
+I, [2021-11-03T20:36:58.984965 #266]  INFO -- : (0.000142s) SELECT count(*) AS 'count' FROM `users` WHERE ((`pairing_status` LIKE 0 ESCAPE '\') AND (`role` = 2) AND (`field` = 'Business')) LIMIT 1
+I, [2021-11-03T20:36:58.985347 #266]  INFO -- : (0.000189s) SELECT * FROM `users` WHERE ((`pairing_status` LIKE 0 ESCAPE '\') AND (`role` = 2) AND (`field` = 'Business'))
+I, [2021-11-03T20:39:17.833398 #154]  INFO -- : (0.000201s) PRAGMA foreign_keys = 1
+I, [2021-11-03T20:39:17.833504 #154]  INFO -- : (0.000015s) PRAGMA case_sensitive_like = 1
+I, [2021-11-03T20:39:17.843623 #154]  INFO -- : (0.000095s) SELECT sqlite_version()
+I, [2021-11-03T20:39:17.843895 #154]  INFO -- : (0.000107s) PRAGMA table_info('requests')
+I, [2021-11-03T20:39:17.845177 #154]  INFO -- : (0.000180s) PRAGMA table_info('users')
+I, [2021-11-03T20:39:26.565998 #154]  INFO -- : (0.000193s) SELECT * FROM `users` WHERE (`username` = 'admin') LIMIT 1
+I, [2021-11-03T20:39:26.566323 #154]  INFO -- : (0.000118s) SELECT * FROM `users` WHERE (`username` = 'admin') LIMIT 1
+I, [2021-11-03T20:39:26.566593 #154]  INFO -- : (0.000104s) SELECT * FROM `users` WHERE (`username` = 'admin') LIMIT 1
+I, [2021-11-03T20:39:26.566805 #154]  INFO -- : (0.000104s) SELECT * FROM `users` WHERE (`username` = 'admin') LIMIT 1
+I, [2021-11-03T20:39:26.566971 #154]  INFO -- : (0.000093s) SELECT * FROM `users` WHERE (`username` = 'admin') LIMIT 1
+I, [2021-11-03T20:39:26.567127 #154]  INFO -- : (0.000087s) SELECT * FROM `users` WHERE (`username` = 'admin') LIMIT 1
+I, [2021-11-03T20:39:26.567279 #154]  INFO -- : (0.000084s) SELECT * FROM `users` WHERE (`username` = 'admin') LIMIT 1
+I, [2021-11-03T20:39:26.567439 #154]  INFO -- : (0.000094s) SELECT * FROM `users` WHERE (`username` = 'admin') LIMIT 1
+I, [2021-11-03T20:39:26.567612 #154]  INFO -- : (0.000102s) SELECT * FROM `users` WHERE (`username` = 'admin') LIMIT 1
+I, [2021-11-03T20:39:26.567777 #154]  INFO -- : (0.000094s) SELECT * FROM `users` WHERE (`username` = 'admin') LIMIT 1
+I, [2021-11-03T20:39:26.567931 #154]  INFO -- : (0.000084s) SELECT * FROM `users` WHERE (`username` = 'admin') LIMIT 1
+I, [2021-11-03T20:39:26.568088 #154]  INFO -- : (0.000091s) SELECT * FROM `users` WHERE (`username` = 'admin') LIMIT 1
+I, [2021-11-03T20:39:26.568236 #154]  INFO -- : (0.000082s) SELECT * FROM `users` WHERE (`username` = 'admin') LIMIT 1
+I, [2021-11-03T20:39:26.709904 #154]  INFO -- : (0.000958s) SELECT * FROM `users`

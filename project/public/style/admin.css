@@ -1,0 +1,80 @@
+body{
+  background: url(../img/background-gradient.svg) no-repeat ;
+  background-size:cover;
+  padding: 0;
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.admin-table{
+  width: 100%;
+  height: auto;
+  text-align: center;
+}
+
+.admin-table th{
+  padding: 5px;
+  padding-top: 0px;
+  background-color: #ddddddf1;
+  border-collapse: collapse;
+    margin-top:20px;
+}
+
+.admin-table td{
+    height:50px;
+  border-bottom: 1px solid black;
+}   
+
+button{
+  width: 80%;
+  min-height: 32px;
+  color: white;
+  border: none;
+  box-shadow: 1px 1px 2px #000;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+#sendPassword-btn{
+  background-color: #009bbb;
+  transition: .2s;
+  cursor:pointer;
+}
+
+#sendPassword-btn:hover{
+  background-color: #03bee4;
+}
+
+#suspend-btn{
+  background-color: #f2af00;
+}
+
+#suspend-btn:hover{
+  background-color: #f8c239;
+  transition: .2s;
+  cursor:pointer;
+}
+
+#restore-btn{
+  background-color: #7ab800;
+}
+
+#restore-btn:hover{
+  background-color: #8dd301;
+  transition: .2s;
+  cursor:pointer;
+}
+
+#delete-btn{
+  background-color: #d11a2a;
+}
+
+#delete-btn:hover{
+  background-color: #ef3a2a;
+  transition: .2s;
+  cursor:pointer;
+}
+
+.users-info:hover{
+    background-color: rgba(0,0,0,0.2);
+}

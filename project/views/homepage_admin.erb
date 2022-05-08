@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home</title>
+
+  <!--TO ATTACH-->
+  <link rel="stylesheet" href="./style/main.css">
+  <link rel="stylesheet" href="./style/admin.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+  <!--To ATTACH-->
+
+</head>
+<body>
+    <div class="grid-container">
+      <div class="homepage-navbar">
+        <a href="/homepage"><strong>STUDENTMENT</strong></a>
+      </div>
+      <div class="sidebar">
+        <div class="profile-info">Welcome Dear
+            <% if session[:role] == 1 %>
+            Mentee
+            <% elsif session[:role] == 2 %>
+            Mentor
+            <% else %>
+            Admin
+            <% end %><br><b><%=h session[:name] %></b>
+          </div>
+        <ul>
+          <a href="/homepage"><li>Admin Panel</li></a>
+          <a href="/edit"><li>Settings</li></a>
+          <li><a href="/logout">Sign Out</a></li>
+        </ul>
+      </div>
+      <div class="display">
+         <% if @users.count > 0 %>
+      <table class="admin-table" cellspacing="0">
+        <tr>
+          <th>Id</th>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Role</th>
+          <th>Username</th>
+          <th>Gender</th>
+          <th>University</th>
+          <th>Field</th>
+          <th>Password reset</th>
+          <th>Suspend user</th>
+          <th>Restore user</th>
+          <th>Delete user</th>
+        </tr>
+      <% @users.each do |user| %>
+        <tr class="users-info">
+          <td><%=h user.id %></td>
+          <td><%=h user.name%></td>
+          <td><%=h user.email %></td>
+          <td><% if user.role == 1 %>
+                Mentee
+              <% elsif user.role == 2 %>
+                Mentor
+              <% else %>
+                Admin
+              <% end %>
+          </td>
+          <td><%=h user.username %></td>
+          <td><% if user.gender == 1 %>
+                Male
+              <% else %>
+                Female
+              <% end %>
+          </td>
+          <td><%=h user.university %></td>
+          <td><%=h user.field %></td>
+          <% if user.role != 0%>
+              <td><button id="sendPassword-btn">Send Password</button></td>
+              <td><button id="suspend-btn">Suspend</button></td>
+              <td><button id="restore-btn">Restore</button></td>
+              <td><button id="delete-btn">Delete</button></td>
+          <% end %>
+        </tr>
+      <% end %>
+      </table>
+    <% else %>
+        <p> The database is empty!</p>
+    <% end %>   
+      </div>
+    </div>
+      
+</body>
+</html>

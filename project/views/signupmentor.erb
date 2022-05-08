@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign Up</title>
+
+  <!--TO ATTACH-->
+  <link rel="stylesheet" href="./style/main.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+  <!--To ATTACH-->
+
+</head>
+<body>
+  <!--Main Page-->
+   
+  <!--Sign Up Form-->
+    <div class="bg-modal">
+      <div class="modal-content">
+        <!--img created by Alzea Arafat-->  
+        <div class="modal-left"><img src="./img/modal-left.png"></div>
+        <div class="modal-right">
+          <div class="modal-title">Create Mentor</div>
+          <div class="modal-exit">
+            <a id="exit-btn" href="/signin">&#10005</a></div>
+          <form method="POST">
+            <input class="input-space" type="text" name="first_name" placeholder="First Name" required>
+
+            <input class="input-space" type="text" name="surname" placeholder="Last Name" required>
+
+            <input class="input-space" type="text" name="username" placeholder="Username" required>
+
+            <input class="input-space" type="password" name="password" placeholder="Password" required>
+
+            <input id="email-input" class="input-space" type="email" name="email" placeholder="Email" required>
+
+            <SELECT class="input-space" name="gender" placeholder="Gender">
+              <OPTION Value="1">Male</OPTION>
+              <OPTION Value="0">Female</OPTION>
+            </SELECT>
+
+            <input class="input-space" type="text" name="university" placeholder="University" required>
+
+            <SELECT class="input-space" name="role" style="pointer-events: none; appearance: none;">
+              <OPTION Value="2">Mentor</OPTION>
+
+            </SELECT>
+              
+           <SELECT class="input-space" name="field", placeholder="field">
+            <OPTION Value="Astronomy">Astronomy</OPTION>
+            <OPTION Value="Agriculture">Agriculture</OPTION>
+            <OPTION Value="Anthropology">Anthropology</OPTION>
+            <OPTION Value="Applied mathematics">Applied mathematics</OPTION>
+            <OPTION Value="Archaeology">Archaeology</OPTION>
+            <OPTION Value="Architecture and design">Architecture and design</OPTION>
+            <OPTION Value="Area studies">Area studies</OPTION>
+            <OPTION Value="Biology">Biology</OPTION>
+            <OPTION Value="Business">Business</OPTION>
+            <OPTION Value="Chemistry">Chemistry</OPTION>
+            <OPTION Value="Computer science">Computer sciences</OPTION>
+            <OPTION Value="Culinary arts">Culinary arts</OPTION>
+            <OPTION Value="Divinity">Divinity</OPTION>
+            <OPTION Value="Earth sciences">Earth sciences</OPTION>
+            <OPTION Value="Economics">Economics</OPTION>
+            <OPTION Value="Education">Education</OPTION>
+            <OPTION Value="Engineering">Engineering and technology</OPTION>
+            <OPTION Value="Environmental studies and forestry">Environmental studies and forestry</OPTION>
+            <OPTION Value="Family and consumer science">Family and consumer science</OPTION>
+            <OPTION Value="Formal sciences">Formal sciences</OPTION>
+            <OPTION Value="Gender and sexuality studies">Gender and sexuality studies</OPTION>
+            <OPTION Value="Geography">Geography</OPTION>
+            <OPTION Value="History">History</OPTION>
+            <OPTION Value="Human physical performance and recreation">Human physical performance and recreation</OPTION>
+            <OPTION Value="Humanities and social science">Humanities and social science</OPTION>
+            <OPTION Value="Interdisciplinary studies">Interdisciplinary studies</OPTION>
+            <OPTION Value="Journalism, media studies and communication">Journalism, media studies and communication</OPTION>
+            <OPTION Value="Law">Law</OPTION>
+            <OPTION Value="Library and museum studies">Library and museum studies</OPTION>
+            <OPTION Value="Linguistics and languages">Linguistics and languages</OPTION>
+            <OPTION Value="Literature">Literature</OPTION>
+            <OPTION Value="Logic">Logic</OPTION>
+            <OPTION Value="Mathematics">Mathematics</OPTION>
+            <OPTION Value="Medicine">Medicine</OPTION>
+            <OPTION Value="Military sciences">Military sciences</OPTION>
+            <OPTION Value="Organizational studies">Organizational studies</OPTION>
+            <OPTION Value="Performing arts">Performing arts</OPTION>
+            <OPTION Value="Philosophy">Philosophy</OPTION>
+            <OPTION Value="Physics">Physics</OPTION>
+            <OPTION Value="Political science">Political science</OPTION>
+            <OPTION Value="Psychology">Psychology</OPTION>
+            <OPTION Value="Public administration">Public administration</OPTION>
+            <OPTION Value="Public policy">Public policy</OPTION>
+            <OPTION Value="Pure mathematics">Pure mathematics</OPTION>
+            <OPTION Value="Religion">Religion</OPTION>
+            <OPTION Value="Social work">Social work</OPTION>
+            <OPTION Value="Sociology">Sociology</OPTION>
+            <OPTION Value="Space sciences">Space sciences</OPTION>
+            <OPTION Value="Statistics">Statistics</OPTION>
+            <OPTION Value="Systems science">Systems science</OPTION>
+            <OPTION Value="The arts">The arts</OPTION>
+            <OPTION Value="Transportation">Transportation</OPTION>
+            <OPTION Value="Visual arts">Visual arts</OPTION>  
+           </SELECT>
+ 
+            <input id="description-input" class="input-space" type="text" name="description" placeholder="Company Description" required>
+
+            <button id="submit-btn" type="submit" name="Submit">Submit</button>
+          </form>
+        </div>
+      </div>
+    </div>
+</body>
+<script src="./js/scripts.js"></script>
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home</title>
+
+  <!--TO ATTACH-->
+  <link rel="stylesheet" href="./style/main.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+  <!--To ATTACH-->
+
+</head>
+<body>
+    <div class="grid-container">
+      <div class="homepage-navbar">
+        <a href="/homepage"><strong>STUDENTMENT</strong></a>
+      </div>
+      <div class="sidebar">
+        <div class="profile-info">Welcome Dear
+            <% if session[:role] == 1 %>
+            Mentee
+            <% elsif session[:role] == 2 %>
+            Mentor
+            <% else %>
+            Admin
+            <% end %><br><b><%=h session[:name] %></b>
+          </div>
+        <ul>
+          <% if session[:status] == 0%>
+            <a href="/homepage"><li>Find Mentor</li></a>
+          <% else %>
+            <a href="/homepage"><li>My Mentor</li></a>
+          <% end %>
+           <a href="/edit"><li>Settings</li></a>
+          <li><a href="/logout">Sign Out</a></li>
+        </ul>
+      </div>
+      <div class="display-mentees" style="flex-direction: column;">
+          
+      <% if session[:status] == 0 %>
+        <% if User[session[:id]].outgoing_request == 0 %>
+            <h2>List of available mentors:</h2>
+            <div class="available_mentors_table">
+                <% if @available_mentors.count > 0 %>
+                    <table cellspacing="0">
+                        <tr>
+                        <th>Name</th>
+                        <th>Gender</th>
+                        <th>Field of work</th>
+                        <th>Email</th>
+                        <th>Rating</th>
+                        </tr>
+                        <% @available_mentors.each do |mentor| %>
+                            <% @name = mentor.first_name+" "+mentor.surname %>
+                            <tr>
+                                <td><%= @name %></td>
+                                    <td>
+                                        <% if mentor.gender == 0 %>
+                                            Female
+                                        <% else %>
+                                            Male
+                                        <% end %>
+                                    </td>
+                                <td><%= mentor.field %></td>
+                                <!--  <td<#%= mentor.rating %></td>  -->
+                                <td><%= mentor.email %></td>
+                                <td>
+                                    <a href="/request?id=<%= mentor.id %>&name=<%= @name %>"><button>
+                                        Request
+                                        </button></a>
+                                </td>
+                            </tr>
+                        <% end %> 
+                    </table>
+                <% else %>
+                  <p>No available mentors found.</p>
+                <% end %>
+            <% else %>
+                <p>You have already sent a request to a mentor.</p>
+                <a href="/cancelrequest">
+                    Cancel Request
+                </a>
+            <% end %>
+          <% else %>
+            <h2> You are already assigned to a mentor.</h2>
+          <% end %>
+         </div>
+      </div>
+    </div>
+      
+</body>
+<script src="./js/newPassword.js"></script>
+</html>
