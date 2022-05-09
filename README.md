@@ -9,7 +9,7 @@ This is a team project where we have to create a web application for students to
 ___number in the [] means the amount of work___
 - Designing and managing the database [100%]
 - Writing unit test cases [80%]
-- Back-end programming [60%]
+- Back-end programming [55%]
 - UI/UX designing [20%]
 
 ### Snapshot
