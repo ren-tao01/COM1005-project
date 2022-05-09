@@ -1,4 +1,4 @@
-# COM1005_Assignment 
+# COM1005-project
 COM1005 Introduction to Software Engineering is one core module I have in my first year of study.
 This is a team project where we have to create a web application for students to register as a mentee to get pair with a mentor in their related field of study. Mentors are the university professors.
 - Language: Ruby
