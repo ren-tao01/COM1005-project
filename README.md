@@ -15,9 +15,9 @@ ___number in the [] means the amount of work___
 ### Snapshot
 **Login page:**
 </br>
-<img src="https://github.com/ren-tao01/COM1005-project/blob/master/images/ruby_snapshot1.PNG" alt="User login page" width="600"/>
+<img src="https://github.com/ren-tao01/COM1005-project/blob/master/images/ruby_snapshot1.PNG" alt="User login page" width="85%"/>
 </br>
 **Mentee home page:**
 </br>
-<img src="https://github.com/ren-tao01/COM1005-project/blob/master/images/ruby_snapshot2.PNG" alt="Mentee homepage" width="500"/>
+<img src="https://github.com/ren-tao01/COM1005-project/blob/master/images/ruby_snapshot2.PNG" alt="Mentee homepage" width="85%"/>
 
